@@ -59,6 +59,6 @@ DRIVEO dipersiapkan untuk deployment agar dapat diakses secara online melalui do
 4. Yuniar Falesha Arianna (31) / +62 857-0225-0282
 
 
-**GitHub Repository:** [Link GitHub]
+**GitHub Repository:** [https://github.com/sheryl-alt/DRIVEO]
 
 **Website:** [Link Website]
