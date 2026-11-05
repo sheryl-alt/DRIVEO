@@ -1,0 +1,76 @@
+CREATE DATABASE IF NOT EXISTS driveo;
+USE driveo;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  role ENUM('user','admin') NOT NULL DEFAULT 'user',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabel mobil yang dipakai oleh Admin Dashboard /api/cars.
+CREATE TABLE IF NOT EXISTS mobil (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  merek VARCHAR(100) NOT NULL,
+  model VARCHAR(150) NOT NULL,
+  varian VARCHAR(150) DEFAULT '',
+  tahun INT DEFAULT 2023,
+  harga DECIMAL(15,2) NOT NULL DEFAULT 0,
+  kategori VARCHAR(100) DEFAULT '',
+  kondisi VARCHAR(100) DEFAULT '',
+  transmisi VARCHAR(100) DEFAULT '',
+  bahan_bakar VARCHAR(100) DEFAULT '',
+  warna VARCHAR(100) DEFAULT '',
+  kilometer INT DEFAULT 0,
+  status VARCHAR(30) NOT NULL DEFAULT 'Tersedia',
+  is_featured TINYINT(1) NOT NULL DEFAULT 0,
+  deskripsi TEXT,
+  gambar LONGTEXT,
+  gallery LONGTEXT,
+  mesin VARCHAR(150) DEFAULT '',
+  kapasitas VARCHAR(150) DEFAULT '',
+  tenaga VARCHAR(150) DEFAULT '',
+  torsi VARCHAR(150) DEFAULT '',
+  penumpang VARCHAR(150) DEFAULT '',
+  keselamatan TEXT,
+  kenyamanan TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS cars (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  brand VARCHAR(100) NOT NULL,
+  price DECIMAL(15,2) NOT NULL,
+  year INT,
+  transmission VARCHAR(50),
+  fuel VARCHAR(50),
+  mileage INT,
+  color VARCHAR(50),
+  description TEXT,
+  image VARCHAR(255),
+  status ENUM('available','sold') NOT NULL DEFAULT 'available',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS chat_sessions (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  session_id VARCHAR(100) NOT NULL UNIQUE,
+  user_id INT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS chat_history (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  session_id VARCHAR(100) NOT NULL,
+  user_message TEXT NOT NULL,
+  ai_response TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_chat_session (session_id),
+  FOREIGN KEY (session_id) REFERENCES chat_sessions(session_id) ON DELETE CASCADE
+);

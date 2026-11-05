@@ -1,0 +1,2 @@
+-- Optional development data goes here.
+-- Do not store real passwords in this file.

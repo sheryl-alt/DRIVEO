@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Admin | DRIVEO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;font-family:Poppins,Arial,sans-serif;color:#111}
+    body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;background:#f7f7f7 url('/images/driveo-admin-login-background.png') center/cover no-repeat fixed}
+    .login-shell{width:100%;max-width:430px;display:flex;flex-direction:column;align-items:center}
+    .brand{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:22px}
+    .brand svg{width:142px;height:auto;display:block}
+    .admin-tag{font-size:10px;font-weight:700;letter-spacing:3px;color:#ff0000;border-top:1px solid #d8d8d8;border-bottom:1px solid #d8d8d8;padding:5px 22px}
+    .card{width:100%;background:#fff;border:1px solid rgba(20,20,20,.07);border-radius:18px;padding:36px 34px 30px;box-shadow:0 8px 28px rgba(0,0,0,.075)}
+    h1{margin:0;font-size:21px;line-height:1.35;font-weight:800;letter-spacing:-.5px;text-align:center}
+    .accent{width:42px;height:3px;background:#ff0000;border-radius:4px;margin:13px auto 28px}
+    .field{margin-bottom:19px}
+    .field-error{display:none;margin:7px 0 0;color:#d00000;font-size:10px;line-height:1.5}
+    .field.invalid .input-wrap{border-color:#dc2626}
+    .field.invalid .field-error{display:block}
+    .feedback{display:none;margin:0 0 14px;padding:10px 12px;border-radius:8px;font-size:11px;line-height:1.5;align-items:flex-start;gap:8px}
+    .feedback.show{display:flex}
+    .feedback.error{color:#c00000;background:#fff1f1}
+    .feedback.success{color:#187a3d;background:#effaf2}
+    .feedback svg{width:15px;height:15px;flex:0 0 auto;margin-top:1px}
+    .feedback-text{min-width:0}
+    label{display:block;font-size:11px;font-weight:600;letter-spacing:.8px;margin-bottom:8px;color:#292929}
+    .input-wrap{height:48px;display:flex;align-items:center;border:1px solid #dedede;border-radius:9px;background:#fff;transition:border-color .18s,box-shadow .18s}
+    .input-wrap:focus-within{border-color:#ff0000;box-shadow:0 0 0 3px rgba(255,0,0,.07)}
+    .field-icon{width:18px;height:18px;margin-left:14px;color:#777;flex:0 0 auto}
+    input{width:100%;min-width:0;height:100%;border:0;outline:0;background:transparent;padding:0 12px;font:400 12px Poppins,Arial,sans-serif;color:#171717}
+    input::placeholder{color:#a1a1a1}
+    /* Sembunyikan kontrol tampilkan-password bawaan browser; gunakan ikon DRIVEO di kanan saja. */
+    input::-ms-reveal,input::-ms-clear{display:none}
+    input::-webkit-credentials-auto-fill-button{display:none!important;visibility:hidden;pointer-events:none;position:absolute;right:0}
+    .toggle{width:44px;height:100%;border:0;background:transparent;color:#777;display:grid;place-items:center;cursor:pointer;flex:0 0 auto}
+    .toggle svg{width:18px;height:18px}
+    .submit{width:100%;height:48px;border:0;border-radius:9px;background:#ff0000;color:#fff;font:700 12px Poppins,Arial,sans-serif;letter-spacing:1.1px;cursor:pointer;margin-top:5px;transition:background .18s,transform .18s}
+    .submit:hover{background:#df0000}
+    .submit:active{transform:translateY(1px)}
+    .submit:disabled{opacity:.7;cursor:wait}
+    .hint{text-align:center;color:#929292;font-size:10px;margin:20px 0 0}
+    .error{display:none;margin:-5px 0 14px;color:#d00000;font-size:11px;line-height:1.5}
+    @media(max-width:480px){body{padding:22px 16px;background-attachment:scroll}.card{padding:30px 23px 25px}h1{font-size:19px}}
+  </style>
+</head>
+<body>
+  <main class="login-shell">
+    <div class="brand" aria-label="DRIVEO Admin">
+      <svg class="h-[18px] w-[102px] flex-shrink-0" fill="none" height="18" viewBox="0 0 102 18" width="102" xmlns="http://www.w3.org/2000/svg"><path d="M7.92001 0.479998C9.36001 0.479998 10.664 0.663998 11.832 1.032C13.016 1.384 14.024 1.912 14.856 2.616C15.704 3.32 16.36 4.2 16.824 5.256C17.288 6.296 17.52 7.504 17.52 8.88C17.52 10.256 17.288 11.472 16.824 12.528C16.36 13.568 15.704 14.44 14.856 15.144C14.024 15.848 13.016 16.384 11.832 16.752C10.664 17.104 9.36001 17.28 7.92001 17.28H7.33137e-06V0.479998H7.92001ZM3.48001 2.28V15.48H7.92001C8.73601 15.48 9.49601 15.36 10.2 15.12C10.92 14.864 11.544 14.472 12.072 13.944C12.6 13.4 13.016 12.712 13.32 11.88C13.64 11.048 13.8 10.048 13.8 8.88C13.8 7.712 13.64 6.712 13.32 5.88C13.016 5.048 12.6 4.368 12.072 3.84C11.544 3.296 10.92 2.904 10.2 2.664C9.49601 2.408 8.73601 2.28 7.92001 2.28H3.48001ZM28.7963 0.479998C29.9963 0.479998 31.0683 0.615998 32.0123 0.887998C32.9723 1.144 33.7803 1.528 34.4363 2.04C35.0923 2.536 35.5963 3.152 35.9483 3.888C36.3003 4.608 36.4763 5.432 36.4763 6.36C36.4763 7.64 36.1563 8.72 35.5163 9.6C34.8763 10.48 33.9563 11.152 32.7563 11.616L36.7163 17.28H32.7563L29.2283 12.24H28.7963H23.6363V17.28H20.1563V0.479998H28.7963ZM23.6363 2.28V10.44H28.7963C30.0603 10.44 31.0363 10.112 31.7243 9.456C32.4123 8.784 32.7563 7.752 32.7563 6.36C32.7563 4.968 32.4123 3.944 31.7243 3.288C31.0363 2.616 30.0603 2.28 28.7963 2.28H23.6363ZM42.8316 17.28H39.3516V0.479998H42.8316V17.28ZM54.3553 15.24H54.5953L60.6193 0.479998H64.1953L57.3553 17.28H51.5953L44.7553 0.479998H48.3313L54.3553 15.24ZM69.5972 2.28V7.8H78.3572V9.6H69.5972V15.48H80.7572V17.28H66.1172V0.479998H80.7572V2.28H69.5972Z" fill="#111111"></path><path d="M91.5497 1.68C90.7337 1.68 89.9657 1.824 89.2457 2.112C88.5417 2.4 87.9257 2.84 87.3977 3.432C86.8697 4.024 86.4457 4.776 86.1257 5.688C85.8217 6.584 85.6697 7.648 85.6697 8.88C85.6697 10.112 85.8217 11.184 86.1257 12.096C86.4457 12.992 86.8697 13.736 87.3977 14.328C87.9257 14.92 88.5417 15.36 89.2457 15.648C89.9657 15.936 90.7337 16.08 91.5497 16.08C92.3657 16.08 93.1257 15.936 93.8297 15.648C94.5497 15.36 95.1737 14.92 95.7017 14.328C96.2297 13.736 96.6457 12.992 96.9497 12.096C97.2697 11.184 97.4297 10.112 97.4297 8.88C97.4297 7.648 97.2697 6.584 96.9497 5.688C96.6457 4.776 96.2297 4.024 95.7017 3.432C95.1737 2.84 94.5497 2.4 93.8297 2.112C93.1257 1.824 92.3657 1.68 91.5497 1.68ZM91.5497 -1.90735e-06C92.9897 -1.90735e-06 94.2937 0.191998 95.4617 0.575998C96.6457 0.959998 97.6537 1.528 98.4857 2.28C99.3337 3.032 99.9897 3.96 100.454 5.064C100.918 6.168 101.15 7.44 101.15 8.88C101.15 10.32 100.918 11.592 100.454 12.696C99.9897 13.8 99.3337 14.728 98.4857 15.48C97.6537 16.232 96.6457 16.8 95.4617 17.184C94.2937 17.568 92.9897 17.76 91.5497 17.76C90.1097 17.76 88.7977 17.568 87.6137 17.184C86.4297 16.8 85.4137 16.232 84.5657 15.48C83.7337 14.728 83.0857 13.8 82.6217 12.696C82.1737 11.592 81.9497 10.32 81.9497 8.88C81.9497 7.44 82.1737 6.168 82.6217 5.064C83.0857 3.96 83.7337 3.032 84.5657 2.28C85.4137 1.528 86.4297 0.959998 87.6137 0.575998C88.7977 0.191998 90.1097 -1.90735e-06 91.5497 -1.90735e-06Z" fill="#FF0000"></path></svg>
+      <span class="admin-tag">ADMIN</span>
+    </div>
+    <section class="card">
+      <h1>LOGIN ADMINISTRATOR</h1>
+      <div class="accent"></div>
+      <form id="adminLoginForm" novalidate>
+        <div class="field">
+          <label for="adminEmail">EMAIL ADMIN</label>
+          <div class="input-wrap">
+            <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.7-3.4 3-5.2 7-5.2s6.3 1.8 7 5.2"/></svg>
+            <input id="adminEmail" name="email" type="email" autocomplete="username" placeholder="Masukkan email admin" aria-describedby="emailError">
+          </div>
+          <p class="field-error" id="emailError" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="adminPassword">PASSWORD</label>
+          <div class="input-wrap">
+            <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <input id="adminPassword" name="password" type="password" autocomplete="current-password" placeholder="Masukkan password" aria-describedby="passwordError">
+            <button class="toggle" type="button" id="togglePassword" aria-label="Tampilkan password" aria-pressed="false">
+              <svg id="eyeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg>
+            </button>
+          </div>
+          <p class="field-error" id="passwordError" role="alert"></p>
+        </div>
+        <div class="feedback" id="loginFeedback" role="alert" aria-live="polite"><svg id="feedbackIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></svg><span class="feedback-text" id="feedbackText"></span></div>
+        <button class="submit" id="submitButton" type="submit">MASUK</button>
+      </form>
+      <p class="hint">Akses khusus administrator DRIVEO</p>
+    </section>
+  </main>
+  <script>
+    const emailInput = document.getElementById('adminEmail');
+    const passwordInput = document.getElementById('adminPassword');
+    const toggleButton = document.getElementById('togglePassword');
+    const eyeIcon = document.getElementById('eyeIcon');
+    const form = document.getElementById('adminLoginForm');
+    const submit = document.getElementById('submitButton');
+    const feedback = document.getElementById('loginFeedback');
+    const feedbackText = document.getElementById('feedbackText');
+    const feedbackIcon = document.getElementById('feedbackIcon');
+    const emailField = emailInput.closest('.field');
+    const passwordField = passwordInput.closest('.field');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+
+    function clearFieldError(field, message) {
+      field.classList.remove('invalid');
+      message.textContent = '';
+    }
+    function showFieldError(field, message, text) {
+      field.classList.add('invalid');
+      message.textContent = text;
+    }
+    function showFeedback(message, type = 'error') {
+      feedback.className = `feedback ${type} show`;
+      feedbackText.textContent = message;
+      feedbackIcon.innerHTML = type === 'success'
+        ? '<path d="m5 12 4 4L19 6"/>'
+        : '<path d="M12 8v5m0 3h.01"/><circle cx="12" cy="12" r="9"/>';
+    }
+    function hideFeedback() {
+      feedback.className = 'feedback';
+      feedbackText.textContent = '';
+    }
+
+    toggleButton.addEventListener('click', () => {
+      const visible = passwordInput.type === 'password';
+      passwordInput.type = visible ? 'text' : 'password';
+      toggleButton.setAttribute('aria-pressed', String(visible));
+      toggleButton.setAttribute('aria-label', visible ? 'Sembunyikan password' : 'Tampilkan password');
+      eyeIcon.innerHTML = visible
+        ? '<path d="M3 3l18 18"/><path d="M10.6 6.2A9.8 9.8 0 0 1 12 6c6.1 0 9.5 6 9.5 6a15 15 0 0 1-3.1 3.7M6.2 6.2C3.8 7.8 2.5 12 2.5 12s3.4 6 9.5 6c1.2 0 2.3-.2 3.3-.6"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/>'
+        : '<path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/>';
+    });
+
+    emailInput.addEventListener('input', () => {
+      clearFieldError(emailField, emailError);
+      hideFeedback();
+    });
+    passwordInput.addEventListener('input', () => {
+      clearFieldError(passwordField, passwordError);
+      hideFeedback();
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      clearFieldError(emailField, emailError);
+      clearFieldError(passwordField, passwordError);
+      hideFeedback();
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
+      let valid = true;
+      if (!email) {
+        showFieldError(emailField, emailError, 'Email admin wajib diisi.');
+        valid = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+        showFieldError(emailField, emailError, 'Format email belum benar. Periksa kembali email admin.');
+        valid = false;
+      }
+      if (!password) {
+        showFieldError(passwordField, passwordError, 'Password wajib diisi.');
+        valid = false;
+      }
+      if (!valid) return;
+
+      submit.disabled = true;
+      submit.textContent = 'MEMPROSES...';
+      try {
+        let response;
+        try {
+          response = await fetch('http://localhost:5000/api/auth/admin/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ email, password })
+          });
+        } catch (networkError) {
+          throw new Error('Gagal menghubungkan ke server. Silakan coba lagi.');
+        }
+        let result = {};
+        try { result = await response.json(); } catch (_) {}
+        if (response.status === 401) {
+          showFeedback('Email atau password salah.');
+          return;
+        }
+        if (response.status === 403) {
+          showFeedback(result.message || 'Akun ini bukan akun admin.');
+          return;
+        }
+        if (response.ok && (!result.success || result.user?.role !== 'admin' || !result.token)) {
+          showFeedback('Login gagal. Periksa kembali data admin.');
+          return;
+        }
+        if (!response.ok) {
+          showFeedback(response.status >= 500
+            ? 'Server sedang mengalami gangguan. Silakan coba lagi.'
+            : (result.message || 'Login gagal. Silakan periksa kembali data admin.'));
+          return;
+        }
+        sessionStorage.setItem('driveo_token', result.token);
+        sessionStorage.setItem('driveo_user', JSON.stringify(result.user));
+        sessionStorage.setItem('driveo_admin_authenticated', 'true');
+        showFeedback('Login berhasil! Selamat datang, Admin.', 'success');
+        submit.textContent = 'BERHASIL';
+        window.setTimeout(() => {
+          window.parent.postMessage({ type: 'DRIVEO_ADMIN_LOGIN_SUCCESS' }, window.location.origin);
+        }, 1200);
+      } catch (error) {
+        showFeedback(error.message || 'Gagal menghubungkan ke server. Silakan coba lagi.');
+      } finally {
+        if (!sessionStorage.getItem('driveo_admin_authenticated')) {
+          submit.disabled = false;
+          submit.textContent = 'MASUK';
+        }
+      }
+    });
+  </script>
+</body>
+</html>

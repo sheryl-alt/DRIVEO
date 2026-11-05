@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ikon robot DRIVEO AI">
+  <g fill="none" stroke="#FFFFFF" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Antena dan ujung bulat -->
+    <path d="M32 7.5v7.2" />
+    <circle cx="32" cy="5.5" r="2.8" fill="#FFFFFF" stroke="none" />
+    <!-- Headphone kiri dan kanan -->
+    <path d="M13.2 27.5v10.8M50.8 27.5v10.8" stroke-width="5.8" />
+    <!-- Kepala robot: hanya garis putih, transparan di bagian dalam -->
+    <rect x="15.8" y="15.2" width="32.4" height="34.2" rx="10.5" />
+    <!-- Wajah imut sederhana -->
+    <path d="M22.7 29.8c0-3.1 1.4-4.8 3.8-4.8s3.8 1.7 3.8 4.8M33.7 29.8c0-3.1 1.4-4.8 3.8-4.8s3.8 1.7 3.8 4.8" stroke-width="3.8" />
+    <path d="M25.7 37.1q6.3 5.8 12.6 0" stroke-width="3.8" />
+  </g>
+</svg>

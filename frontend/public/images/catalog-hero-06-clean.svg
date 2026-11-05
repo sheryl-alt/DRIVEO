@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 400" preserveAspectRatio="none">
+<path fill="none" stroke="#e4e4e7" stroke-width="1.5" d="M0 345 C220 345 270 160 485 160 S735 75 850 0"/>
+<path fill="#ededee" d="M200 400 C310 300 340 230 495 222 C640 214 675 105 850 25 L850 400Z"/>
+<path fill="#161616" d="M320 400 C410 300 460 280 555 260 C690 228 755 160 850 105 L850 400Z"/>
+<path fill="#ff0000" d="M455 400 C570 320 590 310 685 280 C755 257 810 210 850 180 L850 400Z"/>
+<path fill="none" stroke="#bdbdc1" stroke-width="1" d="M0 365 C250 360 335 180 515 180 S740 92 850 35"/>
+</svg>

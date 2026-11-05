@@ -1,0 +1,1462 @@
+<!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRIVEO - Detail Mobil Toyota Fortuner 2.8 VRZ</title>
+  
+  <!-- Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            driveo: {
+              red: '#FF0000',
+              black: '#111111',
+              dark: '#0D0D0D',
+              gray: '#6B7280',
+              light: '#F9FAFB',
+              border: '#E5E7EB',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #111111;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+    }
+    .text-primary-red {
+      color: #FF0000;
+    }
+    .bg-primary-red {
+      background-color: #FF0000;
+    }
+  </style>
+
+<style id="driveo-desktop-balance">
+  /* DRIVEO desktop balance: only normalize page width; preserve existing design/layout. */
+  @media (min-width: 1024px) {
+    html {
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0 !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    body {
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0 !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      overflow-x: hidden !important;
+    }
+  }
+</style>
+
+<style id="driveo-responsive-mobile">
+/* DRIVEO responsive layer: desktop styles remain unchanged. */
+@media (max-width: 767px) {
+  html {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    height: auto !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+  body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    min-height: 100vh !important;
+    height: auto !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+
+  /* Keep every page section inside the phone viewport. */
+  main, section, footer, .view-katalog, .view-detail-mobil {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  [class*="max-w-"] {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  img, svg, video, canvas {
+    max-width: 100% !important;
+  }
+  input, select, textarea, button {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Convert multi-column content to a single readable phone column. */
+  .grid,
+  [class*="grid-cols-"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  main .flex-row,
+  section .flex-row,
+  footer .flex-row {
+    flex-direction: column !important;
+  }
+
+  /* Reduce desktop-only horizontal spacing while preserving the same visual system. */
+  [class~="px-12"], [class~="md:px-12"], [class~="lg:px-12"],
+  [class~="px-10"], [class~="md:px-10"], [class~="lg:px-10"] {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  [class~="px-8"], [class~="md:px-8"], [class~="lg:px-8"] {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Prevent long headings/buttons from causing horizontal overflow. */
+  h1, h2, h3, h4, p, a, button, label, td, th {
+    overflow-wrap: anywhere;
+  }
+  h1 { font-size: clamp(2rem, 9vw, 3rem) !important; line-height: 1.08 !important; }
+  h2 { font-size: clamp(1.45rem, 6vw, 2rem) !important; line-height: 1.15 !important; }
+
+  /* Search/filter areas and button groups fit the phone width. */
+  form, .flex-wrap {
+    max-width: 100% !important;
+  }
+  table {
+    width: 100% !important;
+  }
+  .overflow-x-auto {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Floating AI/chat elements stay reachable and never exceed the viewport. */
+  #driveo-ai-widget, .driveo-ai-widget {
+    right: 12px !important;
+    bottom: 12px !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+  #ai-chat-popup, .ai-chat-popup {
+    right: 12px !important;
+    left: 12px !important;
+    bottom: 76px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  /* Modals remain centered and scrollable on small screens. */
+  [id*="modal" i].fixed, .fixed.inset-0 {
+    padding: 12px !important;
+  }
+  [id*="modal" i] > div {
+    max-width: 100% !important;
+    max-height: calc(100vh - 24px) !important;
+    overflow-y: auto !important;
+  }
+
+  /* Katalog/detail cards: keep media inside the card instead of overflowing. */
+  .view-katalog .grid > *,
+  .view-detail-mobil .grid > *,
+  main .grid > * {
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Footer columns become a vertical list. */
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  /* Admin dashboard responsive shell. */
+  aside {
+    max-width: 250px !important;
+  }
+  body > div.flex-1 {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  body > div.flex-1 > main {
+    padding: 16px !important;
+  }
+  .admin-toast, #admin-toast {
+    right: 12px !important;
+    left: 12px !important;
+    bottom: 12px !important;
+  }
+}
+</style>
+
+<style>
+
+/* DRIVEO shared mobile navbar alignment */
+@media (max-width: 767px) {
+  body header.sticky { width: 100%; }
+  body header.sticky > div:first-child,
+  body header.sticky > div:first-child > div:first-child {
+    box-sizing: border-box;
+    min-height: 64px;
+  }
+  body header.sticky > div:first-child {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  body header.sticky > div:first-child > div:first-child {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+  }
+  body header.sticky a:first-child { flex: 0 0 auto; }
+  body header.sticky svg.h-\\[18px\\],
+  body header.sticky img[alt*="DRIVEO"] { max-width: 94px; }
+  body header.sticky nav { display: none; }
+  body header.sticky > div:first-child > div:first-child > div:last-child,
+  body header.sticky > div:first-child > div:last-child {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+  }
+  body header.sticky button[aria-label*="Cari"],
+  body header.sticky button[aria-label*="Pencarian"],
+  body header.sticky button[title*="Cari"],
+  body header.sticky button[title*="Pencarian"] { display: none !important; }
+  body header.sticky button[onclick*="openLoginModal"],
+  body header.sticky button#openLoginModal {
+    padding: 8px 14px !important;
+    min-height: 36px !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+  }
+}
+
+</style>
+
+<style id="driveo-mobile-nav-unified">
+@media (max-width:767px){
+ body{overflow-x:hidden} body header.sticky{position:sticky;top:0;width:100%;z-index:100;background:#fff!important;box-sizing:border-box;border-radius:14px 14px 0 0;box-shadow:0 1px 8px rgba(0,0,0,.05)}
+ body header.sticky > div:first-child{min-height:56px!important;height:56px!important;padding-left:24px!important;padding-right:16px!important;box-sizing:border-box}
+ body header.sticky > div:first-child > div:first-child{min-height:56px!important;height:56px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;flex-wrap:nowrap!important}
+ body header.sticky a:first-child{flex:0 0 auto!important} body header.sticky svg.h-\[18px\],body header.sticky img[alt*="DRIVEO"]{max-width:90px!important;width:auto}
+ body header.sticky nav{display:none!important}
+ body header.sticky button[aria-label*="Cari" i],body header.sticky button[aria-label*="Pencarian" i],body header.sticky button[title*="Cari" i],body header.sticky button[title*="Pencarian" i]{display:none!important}
+ body header.sticky button[onclick*="login" i],body header.sticky button#openLoginModal{position:absolute!important;right:68px!important;top:12px!important;padding:7px 13px!important;height:33px!important;min-height:33px!important;border-radius:5px!important;font-size:10px!important;line-height:16px!important;margin:0!important;white-space:nowrap!important}
+ body header.sticky .driveo-mobile-nav-toggle{display:flex!important;position:absolute;right:16px;top:12px;width:36px;height:33px;align-items:center;justify-content:center;background:#fff;border:1px solid #eee;border-radius:6px;color:#111;font-size:18px;line-height:1;z-index:3}
+ #driveo-mobile-menu{display:none;background:#fff;border-top:1px solid #f1f1f1;padding:8px 18px 14px;box-shadow:0 8px 16px rgba(0,0,0,.04);position:relative;z-index:99}
+ #driveo-mobile-menu.is-open{display:block}
+ #driveo-mobile-menu a{display:flex;align-items:center;min-height:39px;padding:7px 0;color:#111;text-decoration:none;font-family:Poppins,Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase}
+ #driveo-mobile-menu a:last-child{color:#f00}
+}
+@media(min-width:768px){.driveo-mobile-nav-toggle,#driveo-mobile-menu{display:none!important}}
+</style>
+
+
+<style id="driveo-login-tabs-horizontal-fix">
+/* Login role tabs: USER and ADMIN must always sit side by side on mobile and desktop. */
+@media (max-width: 767px) {
+  #tab-user-btn, #tab-admin-btn, #modalTabUser, #modalTabAdmin, #loginTabUser, #loginTabAdmin, #tabUserBtn, #tabAdminBtn {
+    display: block !important; flex: 1 1 0% !important; width: 50% !important; min-width: 0 !important;
+    max-width: 50% !important; box-sizing: border-box !important;
+  }
+  div:has(> #tab-user-btn):has(> #tab-admin-btn),
+  div:has(> #modalTabUser):has(> #modalTabAdmin),
+  div:has(> #loginTabUser):has(> #loginTabAdmin),
+  div:has(> #tabUserBtn):has(> #tabAdminBtn) {
+    display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important;
+    align-items: stretch !important; width: 100% !important; grid-template-columns: none !important;
+  }
+}
+</style>
+
+<style id="driveo-ai-indicator-final-tune">
+/* Final shared tuning: compact indicator, thin aligned outline, consistent blink. */
+#driveo-ai-widget #floatingAiBtn>span{
+  top:2px!important;right:2px!important;
+  width:12px!important;height:12px!important;min-width:12px!important;min-height:12px!important;
+  padding:0!important;margin:0!important;
+  background:#fff!important;border:1.5px solid #ff0000!important;border-radius:50%!important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.82)!important;
+  transform-origin:center!important;
+  animation:driveoAiDotBlinkFinal 1.15s ease-in-out infinite!important;
+}
+@keyframes driveoAiDotBlinkFinal{
+  0%,100%{opacity:1;transform:scale(1)}
+  48%{opacity:.72;transform:scale(1.06)}
+}
+@media(max-width:640px){#driveo-ai-widget #floatingAiBtn>span{top:2px!important;right:2px!important;width:12px!important;height:12px!important;min-width:12px!important;min-height:12px!important}}
+@media(prefers-reduced-motion:reduce){#driveo-ai-widget #floatingAiBtn>span{animation:none!important}}
+</style>
+
+
+
+
+<style id="driveo-remove-duplicate-thin-nav-line-v10">
+/* Remove only the extra thin underline; keep the solid active-nav underline (after). */
+header.sticky nav a::before { content: none !important; display: none !important; border: 0 !important; box-shadow: none !important; background: transparent !important; }
+header.sticky { border-bottom: 0 !important; box-shadow: none !important; }
+header.sticky > div:first-child { border-bottom: 0 !important; box-shadow: none !important; }
+</style>
+
+
+<style id="driveo-final-remove-extra-lines-v11">
+/* Keep the single thick active underline (::after); remove all other nav rules/lines. */
+header.sticky { border-bottom: 0 !important; border-bottom-width: 0 !important; border-bottom-style: none !important; box-shadow: none !important; outline: 0 !important; }
+header.sticky > div:first-child { border-bottom: 0 !important; border-bottom-width: 0 !important; box-shadow: none !important; }
+header.sticky nav a { border-bottom: 0 !important; border-bottom-width: 0 !important; box-shadow: none !important; text-decoration: none !important; background-image: none !important; }
+header.sticky nav a::before { content: none !important; display: none !important; border: 0 !important; box-shadow: none !important; background: none !important; }
+/* Catalog artwork starts flush below the navbar: no border, outline, or shadow seam. */
+.driveo-catalog-hero { border-top: 0 !important; border-bottom: 0 !important; box-shadow: none !important; outline: 0 !important; }
+.driveo-catalog-hero-inner, .driveo-catalog-art { border: 0 !important; box-shadow: none !important; outline: 0 !important; }
+</style>
+
+
+<style id="driveo-nav-line-final-fix-v12">
+/* Remove the extra hairline/shadow while preserving the solid active red bar. */
+header.sticky { border-bottom: 0 !important; border-bottom-width: 0 !important; border-bottom-style: none !important; box-shadow: none !important; }
+header.sticky nav a::before { content: none !important; display: none !important; }
+header.sticky nav a::after { box-shadow: none !important; outline: 0 !important; filter: none !important; text-shadow: none !important; }
+</style>
+
+<style>input[type="password"]::-ms-reveal, input[type="text"]#loginPasswordInput::-ms-reveal { display:none; }</style>
+
+<style id="driveo-consistent-dropdown-controls">
+/* Dropdown/form controls: aligned, compact, responsive and consistent across pages. */
+select { box-sizing:border-box !important; min-width:0; max-width:100%; border-radius:9px !important; border:1px solid #E5E5E5 !important; background-color:#FAFAFA !important; color:#222 !important; line-height:1.35 !important; }
+select:focus { outline:none !important; border-color:#FF0000 !important; box-shadow:0 0 0 2px rgba(255,0,0,.08) !important; }
+[role="listbox"], [role="menu"] { box-sizing:border-box; max-width:calc(100vw - 24px); }
+@media(max-width:640px){ select { max-width:100% !important; } }
+</style>
+
+<style id="driveo-responsive-containment">
+/* DRIVEO responsive containment */
+*,*::before,*::after{box-sizing:border-box}
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{min-width:0}
+img,video,svg,canvas{max-width:100%;height:auto}
+main,header,footer,section,nav,article,form{min-width:0;max-width:100%}
+input,select,textarea,button{max-width:100%;min-width:0}
+select,input,textarea{box-sizing:border-box}
+@media(max-width:767px){
+ html,body{width:100%;max-width:100vw;overflow-x:hidden}
+ body{font-size:14px}
+ main{width:100%;max-width:100vw;overflow-x:clip}
+ .container,.max-w-screen-xl,.max-w-screen-2xl{width:100%;max-width:100%}
+ img{object-fit:contain}
+ table{display:block;max-width:100%;overflow-x:auto}
+ input,select,textarea{font-size:16px}
+ [role="dialog"],.modal{width:calc(100vw - 24px)!important;max-width:calc(100vw - 24px)!important;max-height:calc(100dvh - 24px);overflow-y:auto}
+}
+</style>
+</head>
+<body class="bg-white text-[#111111] antialiased">
+
+  <!-- ==================== 1. NAVBAR ==================== -->
+  <header class="sticky top-0 z-40 bg-white transition-all">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo SVG -->
+      <a href="/beranda" class="flex items-center gap-1 group" title="DRIVEO Showroom">
+        <svg class="h-[30px] w-[170px] flex-shrink-0" fill="none" height="18" viewBox="0 0 102 18" width="102" xmlns="http://www.w3.org/2000/svg"><path d="M7.92001 0.479998C9.36001 0.479998 10.664 0.663998 11.832 1.032C13.016 1.384 14.024 1.912 14.856 2.616C15.704 3.32 16.36 4.2 16.824 5.256C17.288 6.296 17.52 7.504 17.52 8.88C17.52 10.256 17.288 11.472 16.824 12.528C16.36 13.568 15.704 14.44 14.856 15.144C14.024 15.848 13.016 16.384 11.832 16.752C10.664 17.104 9.36001 17.28 7.92001 17.28H7.33137e-06V0.479998H7.92001ZM3.48001 2.28V15.48H7.92001C8.73601 15.48 9.49601 15.36 10.2 15.12C10.92 14.864 11.544 14.472 12.072 13.944C12.6 13.4 13.016 12.712 13.32 11.88C13.64 11.048 13.8 10.048 13.8 8.88C13.8 7.712 13.64 6.712 13.32 5.88C13.016 5.048 12.6 4.368 12.072 3.84C11.544 3.296 10.92 2.904 10.2 2.664C9.49601 2.408 8.73601 2.28 7.92001 2.28H3.48001ZM28.7963 0.479998C29.9963 0.479998 31.0683 0.615998 32.0123 0.887998C32.9723 1.144 33.7803 1.528 34.4363 2.04C35.0923 2.536 35.5963 3.152 35.9483 3.888C36.3003 4.608 36.4763 5.432 36.4763 6.36C36.4763 7.64 36.1563 8.72 35.5163 9.6C34.8763 10.48 33.9563 11.152 32.7563 11.616L36.7163 17.28H32.7563L29.2283 12.24H28.7963H23.6363V17.28H20.1563V0.479998H28.7963ZM23.6363 2.28V10.44H28.7963C30.0603 10.44 31.0363 10.112 31.7243 9.456C32.4123 8.784 32.7563 7.752 32.7563 6.36C32.7563 4.968 32.4123 3.944 31.7243 3.288C31.0363 2.616 30.0603 2.28 28.7963 2.28H23.6363ZM42.8316 17.28H39.3516V0.479998H42.8316V17.28ZM54.3553 15.24H54.5953L60.6193 0.479998H64.1953L57.3553 17.28H51.5953L44.7553 0.479998H48.3313L54.3553 15.24ZM69.5972 2.28V7.8H78.3572V9.6H69.5972V15.48H80.7572V17.28H66.1172V0.479998H80.7572V2.28H69.5972Z" fill="#111111"></path><path d="M91.5497 1.68C90.7337 1.68 89.9657 1.824 89.2457 2.112C88.5417 2.4 87.9257 2.84 87.3977 3.432C86.8697 4.024 86.4457 4.776 86.1257 5.688C85.8217 6.584 85.6697 7.648 85.6697 8.88C85.6697 10.112 85.8217 11.184 86.1257 12.096C86.4457 12.992 86.8697 13.736 87.3977 14.328C87.9257 14.92 88.5417 15.36 89.2457 15.648C89.9657 15.936 90.7337 16.08 91.5497 16.08C92.3657 16.08 93.1257 15.936 93.8297 15.648C94.5497 15.36 95.1737 14.92 95.7017 14.328C96.2297 13.736 96.6457 12.992 96.9497 12.096C97.2697 11.184 97.4297 10.112 97.4297 8.88C97.4297 7.648 97.2697 6.584 96.9497 5.688C96.6457 4.776 96.2297 4.024 95.7017 3.432C95.1737 2.84 94.5497 2.4 93.8297 2.112C93.1257 1.824 92.3657 1.68 91.5497 1.68ZM91.5497 -1.90735e-06C92.9897 -1.90735e-06 94.2937 0.191998 95.4617 0.575998C96.6457 0.959998 97.6537 1.528 98.4857 2.28C99.3337 3.032 99.9897 3.96 100.454 5.064C100.918 6.168 101.15 7.44 101.15 8.88C101.15 10.32 100.918 11.592 100.454 12.696C99.9897 13.8 99.3337 14.728 98.4857 15.48C97.6537 16.232 96.6457 16.8 95.4617 17.184C94.2937 17.568 92.9897 17.76 91.5497 17.76C90.1097 17.76 88.7977 17.568 87.6137 17.184C86.4297 16.8 85.4137 16.232 84.5657 15.48C83.7337 14.728 83.0857 13.8 82.6217 12.696C82.1737 11.592 81.9497 10.32 81.9497 8.88C81.9497 7.44 82.1737 6.168 82.6217 5.064C83.0857 3.96 83.7337 3.032 84.5657 2.28C85.4137 1.528 86.4297 0.959998 87.6137 0.575998C88.7977 0.191998 90.1097 -1.90735e-06 91.5497 -1.90735e-06Z" fill="#FF0000"></path></svg>
+      </a>
+
+      <!-- Navigation Links (Poppins SemiBold 600, Uppercase) -->
+      <nav class="hidden md:flex items-center space-x-10"><a href="/beranda" class="text-sm font-semibold tracking-wider text-[#111111] hover:text-[#FF0000] transition-colors">BERANDA</a><a href="/tentang-kami" class="text-sm font-semibold tracking-wider text-[#111111] hover:text-[#FF0000] transition-colors">TENTANG KAMI</a><a href="/katalog" class="text-sm font-semibold tracking-wider text-[#FF0000] relative py-1">KATALOG<span class="absolute bottom-0 left-0 w-full h-[2px] bg-[#FF0000]"></span></a><a href="/kontak" class="text-sm font-semibold tracking-wider text-[#111111] hover:text-[#FF0000] transition-colors">HUBUNGI KAMI</a></nav>
+
+      <!-- Right Action: Search & Login -->
+      <div class="flex items-center gap-5">
+        <button type="button" onclick="navigateTo('catalog');" class="text-[#111111] hover:text-[#FF0000] transition-colors p-2" title="Cari Mobil">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+        <button type="button" onclick="openLoginModal()" class="border border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-white px-5 py-2 rounded-lg text-xs font-semibold tracking-wider transition-all cursor-pointer">LOGIN</button>
+      </div>
+
+    </div>
+  </header>
+<nav id="driveo-mobile-menu" aria-label="Navigasi utama mobile">
+<a href="/beranda">BERANDA</a><a href="/tentang-kami">TENTANG KAMI</a><a href="/katalog">KATALOG</a><a href="/kontak">HUBUNGI KAMI</a>
+</nav>
+<script id="driveo-mobile-nav-script">
+(function(){const header=document.querySelector('header.sticky');if(!header||header.querySelector('.driveo-mobile-nav-toggle'))return;const toggle=document.createElement('button');toggle.type='button';toggle.className='driveo-mobile-nav-toggle';toggle.setAttribute('aria-label','Buka menu');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰';header.appendChild(toggle);const menu=document.getElementById('driveo-mobile-menu');if(!menu)return;toggle.addEventListener('click',function(){const open=menu.classList.toggle('is-open');toggle.textContent=open?'×':'☰';toggle.setAttribute('aria-label',open?'Tutup menu':'Buka menu');toggle.setAttribute('aria-expanded',String(open));});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',function(){menu.classList.remove('is-open');toggle.textContent='☰';toggle.setAttribute('aria-expanded','false');}));})();
+</script>
+
+
+  <!-- ==================== 2. BREADCRUMB & BACK BUTTON ==================== -->
+  <section class="bg-[#F9FAFB] border-b border-[#E5E7EB] py-4">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Back Button -->
+      <a href="/katalog" class="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#111111] hover:text-[#FF0000] transition-colors py-1.5 px-3 rounded-lg border border-[#E5E7EB] bg-white shadow-sm hover:border-[#FF0000]">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
+        </svg>
+        <span class="">Kembali ke Katalog</span>
+      </a>
+
+      <!-- Breadcrumb Trail -->
+      <nav class="flex items-center text-xs font-medium tracking-wide text-gray-500"><a href="/beranda" class="hover:text-[#111111] transition-colors">BERANDA</a><span class="mx-2 text-gray-400">/</span><a href="/katalog" class="hover:text-[#111111] transition-colors">KATALOG</a><span class="mx-2 text-gray-400">/</span><span class="text-[#FF0000] font-semibold" id="breadcrumb-car-title">TOYOTA FORTUNER 2.8 VRZ</span></nav>
+
+    </div>
+  </section>
+
+  <!-- ==================== 3. BAGIAN UTAMA DETAIL MOBIL (2 KOLOM) ==================== -->
+  <main class="max-w-[1440px] mx-auto px-6 md:px-12 py-10 lg:py-14">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+      
+      <!-- KOLOM KIRI: GALERI MOBIL INTERAKTIF -->
+      <div class="lg:col-span-7 flex flex-col gap-4">
+        
+        <!-- Foto Utama Besar -->
+        <div class="relative w-full aspect-[16/10] bg-[#111111] rounded-2xl overflow-hidden border border-[#E5E7EB] shadow-md group">
+          <img id="main-car-image" src="https://lh3.googleusercontent.com/aida/AEtjO1VZ52EDZ82RNMpov7BNkbRJBKpRu-yTTu1eY_NoU1C4kILuac58E-een9y5r_VNVQnVqXaKswUjPQSkrq7C-Cn4vbr_XgoBd3pxyBxHBmcJDuJocE8V-UeoX3QoxBgCv0TWJwrrvxrUr91odPKXpGR3Gn_3qWKgrAX2233Yr4QCeGDjtKXO8db1phzY8XFF0TENF71ZE5zb5NMWQ0vE5rrH0XDXuPzsltTDEg39XMUKQdZqHC65VU2NZA" alt="Toyota Fortuner 2.8 VRZ Tampak Depan Studio" class="w-full h-full object-cover object-center transition-all duration-300">
+          
+          <!-- Badges Overlay -->
+          <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+            <span class="bg-[#111111]/90 backdrop-blur-md text-white text-[11px] font-semibold tracking-wider px-3 py-1.5 rounded-md uppercase border border-white/10 shadow">
+              TERSEDIA
+            </span>
+            <span class="bg-[#FF0000] text-white text-[11px] font-semibold tracking-wider px-3 py-1.5 rounded-md uppercase shadow">
+              TERVERIFIKASI 50+ TITIK
+            </span>
+          </div>
+
+          <!-- Quick Watermark / Year Badge -->
+          <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-md text-[11px] font-semibold text-[#111111] shadow">
+            DRIVEO CERTIFIED PRE-OWNED
+          </div>
+        </div>
+
+        <!-- Thumbnail Gallery Grid (Clickable to switch main photo) -->
+        <div class="grid grid-cols-4 gap-3 md:gap-4">
+          
+          <!-- Thumb 1: Front 3/4 (Default Active) -->
+          <button type="button" onclick="switchGalleryImage('https://lh3.googleusercontent.com/aida/AEtjO1VZ52EDZ82RNMpov7BNkbRJBKpRu-yTTu1eY_NoU1C4kILuac58E-een9y5r_VNVQnVqXaKswUjPQSkrq7C-Cn4vbr_XgoBd3pxyBxHBmcJDuJocE8V-UeoX3QoxBgCv0TWJwrrvxrUr91odPKXpGR3Gn_3qWKgrAX2233Yr4QCeGDjtKXO8db1phzY8XFF0TENF71ZE5zb5NMWQ0vE5rrH0XDXuPzsltTDEg39XMUKQdZqHC65VU2NZA', this)" class="thumb-item group relative aspect-[16/10] rounded-xl overflow-hidden border-2 border-[#FF0000] bg-gray-100 focus:outline-none transition-all hover:opacity-90 shadow-sm">
+            <img src="https://lh3.googleusercontent.com/aida/AEtjO1VZ52EDZ82RNMpov7BNkbRJBKpRu-yTTu1eY_NoU1C4kILuac58E-een9y5r_VNVQnVqXaKswUjPQSkrq7C-Cn4vbr_XgoBd3pxyBxHBmcJDuJocE8V-UeoX3QoxBgCv0TWJwrrvxrUr91odPKXpGR3Gn_3qWKgrAX2233Yr4QCeGDjtKXO8db1phzY8XFF0TENF71ZE5zb5NMWQ0vE5rrH0XDXuPzsltTDEg39XMUKQdZqHC65VU2NZA" alt="Tampak Depan Tiga Perempat" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+            <span class="absolute bottom-1.5 left-1.5 text-[9px] font-semibold text-white bg-black/75 px-1.5 py-0.5 rounded backdrop-blur-sm">Depan</span>
+          </button>
+
+          <!-- Thumb 2: Rear Angle Studio -->
+          <button type="button" onclick="switchGalleryImage('https://lh3.googleusercontent.com/aida/AEtjO1Weyp-u_j_tfNvWBHth7I6hVq3uE_FbB4ZRa_7rSuQjT2oAum2zvuw-s6una8UK66jeMUc8eM_0Oi0bw40yZh27FUfDPteTlo29wdqp7-CfpGVcozp5RIH9lIH5rEB7I7fuxYzvnLksG8iYX0-KbUNoN41DH9guiPvVMXCDBUObMND7C8QZYvf6HmSyhxRAlj3gj1lemrFUmTcRqX2xd2qSFbCKQH74j9LcyGEh9JS35rz_eTACS1l6Ftr0', this)" class="thumb-item group relative aspect-[16/10] rounded-xl overflow-hidden border-2 border-[#E5E7EB] hover:border-gray-400 bg-gray-100 focus:outline-none transition-all hover:opacity-90 shadow-sm">
+            <img src="https://lh3.googleusercontent.com/aida/AEtjO1Weyp-u_j_tfNvWBHth7I6hVq3uE_FbB4ZRa_7rSuQjT2oAum2zvuw-s6una8UK66jeMUc8eM_0Oi0bw40yZh27FUfDPteTlo29wdqp7-CfpGVcozp5RIH9lIH5rEB7I7fuxYzvnLksG8iYX0-KbUNoN41DH9guiPvVMXCDBUObMND7C8QZYvf6HmSyhxRAlj3gj1lemrFUmTcRqX2xd2qSFbCKQH74j9LcyGEh9JS35rz_eTACS1l6Ftr0" alt="Tampak Belakang Studio" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+            <span class="absolute bottom-1.5 left-1.5 text-[9px] font-semibold text-white bg-black/75 px-1.5 py-0.5 rounded backdrop-blur-sm">Belakang</span>
+          </button>
+
+          <!-- Thumb 3: Interior Cockpit Dashboard -->
+          <button type="button" onclick="switchGalleryImage('https://lh3.googleusercontent.com/aida/AEtjO1XUzFDnzZ6IZQ1qDYq7jM6-e9TpO_NHUy3fv9n2_6N9DPKMs6DbdReBr17amKegVC3HlcMfA0z_sc-KoAdBFdQtuFMNKENStpWTTdkSGxBH20lj24NiaPZj2nJF-XBDU5z67Np-4nIBvyG1gtlbx2QGuUfZAsSNCNC9ZnNPyWUbXDvCUSOKmpnwgCn_H4gV5UZjDW_fiNNVVSEt887jWK_JKUH247JLmm5AcNOBKmeQ1NSNo4sW1AbUfNQ', this)" class="thumb-item group relative aspect-[16/10] rounded-xl overflow-hidden border-2 border-[#E5E7EB] hover:border-gray-400 bg-gray-100 focus:outline-none transition-all hover:opacity-90 shadow-sm">
+            <img src="https://lh3.googleusercontent.com/aida/AEtjO1XUzFDnzZ6IZQ1qDYq7jM6-e9TpO_NHUy3fv9n2_6N9DPKMs6DbdReBr17amKegVC3HlcMfA0z_sc-KoAdBFdQtuFMNKENStpWTTdkSGxBH20lj24NiaPZj2nJF-XBDU5z67Np-4nIBvyG1gtlbx2QGuUfZAsSNCNC9ZnNPyWUbXDvCUSOKmpnwgCn_H4gV5UZjDW_fiNNVVSEt887jWK_JKUH247JLmm5AcNOBKmeQ1NSNo4sW1AbUfNQ" alt="Interior Cockpit &amp; Dashboard" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+            <span class="absolute bottom-1.5 left-1.5 text-[9px] font-semibold text-white bg-black/75 px-1.5 py-0.5 rounded backdrop-blur-sm">Interior</span>
+          </button>
+
+          <!-- Thumb 4: Showroom Floor Ambience -->
+          <button type="button" onclick="switchGalleryImage('https://lh3.googleusercontent.com/aida/AEtjO1XHIQE7RM31ZMcU_ESPf1_avpG6nugAdzaSgxV1CnyiZUaqX7WW2rkKNTZxh2e28T8TuNwqb9OQdKROBFBAjrDlEjyPc6AC1kQOekIU78XCMN6vjodnRY32nArfhVG71o-jSTAGi6kG8sNFD69loKq9S6LJEeD4Qe8UNvr963d-M89BfrOLaZ75n6qoWoges4xKbAO4MomGVnEFBiYpUEi4j7sNZpy3q8Efp05jtoLk_AUT7B_vZcxfmRw', this)" class="thumb-item group relative aspect-[16/10] rounded-xl overflow-hidden border-2 border-[#E5E7EB] hover:border-gray-400 bg-gray-100 focus:outline-none transition-all hover:opacity-90 shadow-sm">
+            <img src="https://lh3.googleusercontent.com/aida/AEtjO1XHIQE7RM31ZMcU_ESPf1_avpG6nugAdzaSgxV1CnyiZUaqX7WW2rkKNTZxh2e28T8TuNwqb9OQdKROBFBAjrDlEjyPc6AC1kQOekIU78XCMN6vjodnRY32nArfhVG71o-jSTAGi6kG8sNFD69loKq9S6LJEeD4Qe8UNvr963d-M89BfrOLaZ75n6qoWoges4xKbAO4MomGVnEFBiYpUEi4j7sNZpy3q8Efp05jtoLk_AUT7B_vZcxfmRw" alt="Showroom DRIVEO Display" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+            <span class="absolute bottom-1.5 left-1.5 text-[9px] font-semibold text-white bg-black/75 px-1.5 py-0.5 rounded backdrop-blur-sm">Showroom</span>
+          </button>
+
+        </div>
+
+        <!-- Garansi & Layanan Tambahan Banner -->
+        <div class="mt-4 p-4 rounded-xl bg-[#F9FAFB] border border-[#E5E7EB] flex items-center justify-between flex-wrap gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-[#111111] text-white flex items-center justify-center shrink-0">
+              <img src="/images/driveo-ai-avatar-premium.png" alt="Avatar DRIVEO AI" class="w-7 h-7 rounded-full object-cover" />
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold text-[#111111] uppercase tracking-wider">Garansi Bebas Banjir &amp; Tabrakan</h4>
+              <p class="text-[11px] text-gray-500 font-normal">Inspeksi teknis 50+ titik dan garansi mesin resmi DRIVEO</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- KOLOM KANAN: INFORMASI MOBIL & SPECS GRID -->
+      <div class="lg:col-span-5 flex flex-col justify-start">
+        
+        <!-- Header Info Kendaraan -->
+        <div class="border-b border-[#E5E7EB] pb-6 mb-6">
+          
+          <!-- Kicker Category & Status -->
+          <div class="flex items-center justify-between gap-3 mb-2">
+            <span class="text-xs font-semibold tracking-wider text-gray-400 uppercase">SUV PREMIUM • DIESEL</span>
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Unit Siap Dikirim
+            </span>
+          </div>
+
+          <!-- Nama Mobil Utama (Poppins ExtraBold 800) -->
+          <h1 id="car-name" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#111111] uppercase tracking-tight leading-tight">
+            TOYOTA FORTUNER 2.8 VRZ
+          </h1>
+
+          <!-- Tagline Varian & Tahun -->
+          <div class="flex items-center gap-3 mt-2">
+            <span id="car-year-label" class="inline-block bg-[#111111] text-white text-xs font-semibold px-2.5 py-1 rounded-md tracking-wider">
+              2023
+            </span>
+            <span class="text-xs font-normal text-gray-500">Body Styling Original</span>
+          </div>
+
+          <!-- Harga Kendaraan (Poppins ExtraBold 800) -->
+          <div class="mt-6 pt-5 border-t border-dashed border-gray-200">
+            <span class="text-xs font-semibold uppercase text-gray-400 tracking-wider">HARGA SPESIAL CASH / KREDIT</span>
+            <div class="flex items-baseline gap-2 mt-1">
+              <span id="car-price" class="text-3xl sm:text-4xl font-extrabold text-[#FF0000] tracking-tight">
+                Rp 525.000.000
+              </span>
+              <span class="text-xs font-normal text-gray-500">(Nego di Showroom)</span>
+            </div>
+            <p class="text-xs font-normal text-gray-500 mt-1">
+              Estimasi Angsuran mulai <span class="font-semibold text-[#111111]">Rp 8,4 Jt/bulan</span> • TDP Fleksibel
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Grid Ringkasan Informasi Penting (Card Kecil 2x3 Grid) -->
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold tracking-wider uppercase text-gray-400 mb-3">RINGKASAN KENDARAAN</h3>
+          
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            
+            <!-- Item 1: Tahun -->
+            <div class="bg-[#F9FAFB] p-3.5 rounded-xl border border-[#E5E7EB] hover:border-gray-300 transition-colors">
+              <span class="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">Tahun</span>
+              <span id="info-year" class="text-sm font-bold text-[#111111] block mt-0.5">2023</span>
+            </div>
+
+            <!-- Item 2: Kilometer -->
+            <div class="bg-[#F9FAFB] p-3.5 rounded-xl border border-[#E5E7EB] hover:border-gray-300 transition-colors">
+              <span class="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">Kilometer</span>
+              <span id="info-mileage" class="text-sm font-bold text-[#111111] block mt-0.5">28.000 km</span>
+            </div>
+
+            <!-- Item 3: Transmisi -->
+            <div class="bg-[#F9FAFB] p-3.5 rounded-xl border border-[#E5E7EB] hover:border-gray-300 transition-colors">
+              <span class="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">Transmisi</span>
+              <span id="info-transmission" class="text-sm font-bold text-[#111111] block mt-0.5">Automatic</span>
+            </div>
+
+            <!-- Item 4: Bahan Bakar -->
+            <div class="bg-[#F9FAFB] p-3.5 rounded-xl border border-[#E5E7EB] hover:border-gray-300 transition-colors">
+              <span class="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">Bahan Bakar</span>
+              <span id="info-fuel" class="text-sm font-bold text-[#111111] block mt-0.5">Diesel</span>
+            </div>
+
+            <!-- Item 5: Warna -->
+            <div class="bg-[#F9FAFB] p-3.5 rounded-xl border border-[#E5E7EB] hover:border-gray-300 transition-colors">
+              <span class="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">Warna</span>
+              <span id="info-color" class="text-sm font-bold text-[#111111] block mt-0.5">Hitam Metalik</span>
+            </div>
+
+            <!-- Item 6: Kondisi -->
+            <div class="bg-[#F9FAFB] p-3.5 rounded-xl border border-[#E5E7EB] hover:border-gray-300 transition-colors">
+              <span class="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">Kondisi</span>
+              <span id="info-condition" class="text-sm font-bold text-emerald-600 block mt-0.5">Bekas (Terawat)</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tombol Utama Hubungi Kami / WhatsApp Direct -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2"><a href="https://wa.me/6281327099199?text=Halo%20DRIVEO,%20saya%20tertarik%20dengan%20Toyota%20Fortuner%202.8%20VRZ" target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#FF0000] hover:bg-[#E60000] text-white font-semibold text-sm tracking-wider uppercase py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 group"><svg class="w-5 h-5 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg><span class="">HUBUNGI KAMI</span></a><a href="https://maps.google.com/?q=DRIVEO+Showroom+Jl.+Merdeka+No.+37+Binangun+Cilacap" target="_blank" rel="noopener noreferrer" class="border border-[#111111] hover:bg-[#111111] hover:text-white text-[#111111] font-semibold text-sm tracking-wider uppercase py-4 px-6 rounded-xl transition-all flex items-center justify-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path></svg><span class="">Kunjungi Showroom</span></a></div>
+
+        <!-- Lokasi Showroom Quick Mention -->
+        <p class="text-[11px] text-gray-500 font-normal mt-3 text-center sm:text-left">
+          Lokasi Unit: Showroom Resmi DRIVEO, Jl. Merdeka No. 37, Binangun, Cilacap
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ==================== 4. DETAIL & SPESIFIKASI ==================== -->
+  <section class="border-t border-[#E5E7EB] bg-[#FAFAFA] py-14">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+      
+      <!-- Section Header -->
+      <div class="mb-10">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-2.5 h-2.5 bg-[#FF0000] rounded-sm"></span>
+          <span class="text-xs font-semibold tracking-wider text-[#FF0000] uppercase">TEKNIS &amp; KEMAMPUAN</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#111111] uppercase tracking-tight">
+          DETAIL &amp; SPESIFIKASI
+        </h2>
+        <p class="text-sm text-gray-500 font-normal mt-1 max-w-2xl">
+          Seluruh data teknis dikurasi dan diverifikasi melalui inspeksi menyeluruh oleh tim teknisi bersertifikat DRIVEO
+        </p>
+      </div>
+
+      <!-- Specs Grid (2 Kolom Lebar, Bersih & Bernapas) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 bg-white p-8 md:p-10 rounded-2xl border border-[#E5E7EB] shadow-sm">
+        
+        <!-- Spec 1: Mesin -->
+        <div class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:bg-gray-50/50 px-2 rounded transition-colors">
+          <span class="text-xs sm:text-sm font-normal text-gray-500">Mesin</span>
+          <span id="spec-engine" class="text-xs sm:text-sm font-semibold text-[#111111] text-right">2.8L 1GD-FTV Diesel Turbo</span>
+        </div>
+
+        <!-- Spec 2: Tenaga -->
+        <div class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:bg-gray-50/50 px-2 rounded transition-colors">
+          <span class="text-xs sm:text-sm font-normal text-gray-500">Tenaga Maksimum</span>
+          <span id="spec-power" class="text-xs sm:text-sm font-semibold text-[#111111] text-right">203 PS @ 3.400 RPM</span>
+        </div>
+
+        <!-- Spec 3: Transmisi -->
+        <div class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:bg-gray-50/50 px-2 rounded transition-colors">
+          <span class="text-xs sm:text-sm font-normal text-gray-500">Transmisi</span>
+          <span id="spec-transmission" class="text-xs sm:text-sm font-semibold text-[#111111] text-right">Automatic 6-Speed Sport Sequential</span>
+        </div>
+
+        <!-- Spec 4: Sistem Penggerak -->
+        <div class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:bg-gray-50/50 px-2 rounded transition-colors">
+          <span class="text-xs sm:text-sm font-normal text-gray-500">Sistem Penggerak</span>
+          <span id="spec-drive" class="text-xs sm:text-sm font-semibold text-[#111111] text-right">4x2 (RWD)</span>
+        </div>
+
+        <!-- Spec 5: Kapasitas -->
+        <div class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:bg-gray-50/50 px-2 rounded transition-colors">
+          <span class="text-xs sm:text-sm font-normal text-gray-500">Kapasitas Kursi</span>
+          <span id="spec-capacity" class="text-xs sm:text-sm font-semibold text-[#111111] text-right">7 Penumpang</span>
+        </div>
+
+        <!-- Spec 6: Tahun -->
+        <div class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:bg-gray-50/50 px-2 rounded transition-colors">
+          <span class="text-xs sm:text-sm font-normal text-gray-500">Tahun Pembuatan</span>
+          <span id="spec-year" class="text-xs sm:text-sm font-semibold text-[#111111] text-right">2023</span>
+        </div>
+
+        <!-- Spec 7: Kilometer -->
+        <div class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:bg-gray-50/50 px-2 rounded transition-colors">
+          <span class="text-xs sm:text-sm font-normal text-gray-500">Kilometer Berjalan</span>
+          <span id="spec-mileage" class="text-xs sm:text-sm font-semibold text-[#111111] text-right">28.000 km (Record Rutin)</span>
+        </div>
+
+        <!-- Spec 8: Legalitas & Pajak -->
+        <div class="flex items-center justify-between py-3.5 border-b border-gray-100 hover:bg-gray-50/50 px-2 rounded transition-colors">
+          <span class="text-xs sm:text-sm font-normal text-gray-500">Surat &amp; Legalitas</span>
+          <span id="spec-legality" class="text-xs sm:text-sm font-semibold text-emerald-600 text-right">BPKB, STNK, Faktur Komplit</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 5. DESKRIPSI MOBIL ==================== -->
+  <section class="bg-white py-14 border-t border-[#E5E7EB]">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+      
+      <div class="max-w-4xl">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-2.5 h-2.5 bg-[#FF0000] rounded-sm"></span>
+          <span class="text-xs font-semibold tracking-wider text-[#FF0000] uppercase">RINGKASAN KURATOR</span>
+        </div>
+        
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#111111] uppercase tracking-tight mb-6">
+          TENTANG MOBIL INI
+        </h2>
+
+        <!-- Area Deskripsi Mudah Diedit -->
+        <div id="car-description" class="space-y-4 text-sm sm:text-base font-normal text-gray-600 leading-relaxed">
+          <p class="">
+            Toyota Fortuner 2.8 VRZ tahun 2023 dengan kondisi terawat dan siap digunakan. Kendaraan memiliki tampilan elegan, kabin luas, serta performa yang cocok untuk kebutuhan keluarga maupun perjalanan jarak jauh
+          </p>
+          <p class="">
+            Unit ini dilengkapi interior kulit hitam original yang bersih tanpa noda maupun robekan, fitur multimedia canggih dengan konektivitas smartphone, sensor parkir 360 derajat, power back door, dan sistem pendingin udara digital dual zone. Servis berkala tercatat lengkap di bengkel resmi Auto2000
+          </p>
+          <p class="">
+            DRIVEO menjamin unit ini bebas dari risiko bekas banjir dan tabrakan struktural berat, serta kelengkapan dokumen asli terjamin keabsahannya
+          </p>
+        </div>
+
+        <!-- Poin Keunggulan Unit -->
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path></svg>
+            </div>
+            <div>
+              <h5 class="text-xs font-semibold text-[#111111] uppercase tracking-wider">Tangan Pertama</h5>
+              <p class="text-[11px] text-gray-500 font-normal">Pemakaian terawat apik dari baru</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path></svg>
+            </div>
+            <div>
+              <h5 class="text-xs font-semibold text-[#111111] uppercase tracking-wider">Kunci Cadangan Lengkap</h5>
+              <p class="text-[11px] text-gray-500 font-normal">Smart key original 2 buah &amp; buku servis</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path></svg>
+            </div>
+            <div>
+              <h5 class="text-xs font-semibold text-[#111111] uppercase tracking-wider">Ban Tebal 90%</h5>
+              <p class="text-[11px] text-gray-500 font-normal">Kondisi tapak ban prima siap luar kota</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 6. CALL TO ACTION (CTA) ==================== -->
+  <section class="bg-[#0D0D0D] text-white py-16 lg:py-20 relative overflow-hidden">
+    <!-- Subtle background pattern glow -->
+    <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-[#FF0000]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10 text-center">
+      
+      <span class="text-xs font-semibold tracking-widest text-[#FF0000] uppercase block mb-3">
+        KONSULTASI &amp; JADWAL INSPEKSI
+      </span>
+
+      <!-- Headline CTA (Poppins ExtraBold 800) -->
+      <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight uppercase max-w-3xl mx-auto leading-tight">
+        TERTARIK DENGAN <span class="text-[#FF0000]">MOBIL INI?</span>
+      </h2>
+
+      <p class="text-sm sm:text-base text-gray-400 font-normal max-w-xl mx-auto mt-4 leading-relaxed">
+        Hubungi tim DRIVEO untuk mendapatkan informasi lebih lanjut mengenai unit ini, perhitungan simulasi kredit, atau jadwalkan sesi test drive langsung di showroom
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-8"><a href="/kontak" class="border border-white/30 hover:border-white text-white font-semibold text-sm tracking-wider uppercase py-4 px-8 rounded-xl hover:bg-white/10 transition-all">LIHAT MOBIL LAINNYA</a></div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 7. FOOTER DRIVEO ==================== -->
+  <footer class="bg-[#0D0D0D] border-t border-white/10 text-white pt-14 pb-8">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Col 1: Brand & Slogan -->
+        <div class="md:col-span-1 flex flex-col gap-4">
+          <img src="https://lh3.googleusercontent.com/aida/AEtjO1XWWA_jV3ZKh6_ElA0xoAACPsQerCZmi7czd8PLolycF_PkADw3T9xG36P_WEhSSS0KsOAeBm2Qy781GkBpCoCyZ8_oorabPji3x8bw6ICSzBaun_wMjysNnCipXilI08lfzOo1flDwL8ahpYLn0PSjVIT8NlfCSWggaCO-vmYLQNDoDFx1jis0fV3SFqw3PrH-WaWSkukx1tJs8E1O0ExYkM63nh_4mR46lr40v6hDz6oKSqjUmKXiasMs" alt="DRIVEO Logo Footer" class="h-6 w-auto object-contain self-start">
+          <p class="text-xs font-normal text-gray-400 leading-relaxed">
+            Showroom kurasi mobil terpercaya dengan standar inspeksi tertinggi, transparansi harga mutlak, dan pelayanan pembelian kendaraan yang aman dan profesional
+          </p>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span class="text-[11px] font-medium text-gray-300">Unit Terverifikasi &amp; Lulus 50+ Titik Inspeksi</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigasi -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-widest text-white mb-4">NAVIGASI</h4>
+          <ul class="space-y-2.5 text-xs font-normal text-gray-400"><li class=""><a href="/beranda" class="hover:text-white transition-colors">Beranda</a></li><li class=""><a href="/tentang-kami" class="hover:text-white transition-colors">Tentang Kami</a></li><li class=""><a href="/katalog" class="text-[#FF0000] font-semibold hover:underline">Katalog Mobil</a></li><li class=""><a href="/kontak" class="hover:text-white transition-colors">Hubungi Kami</a></li></ul>
+        </div>
+
+        <!-- Col 3: Kontak -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-widest text-white mb-4">KONTAK</h4>
+          <ul class="space-y-2.5 text-xs font-normal text-gray-400">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-[#FF0000] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path></svg>
+              <span class="">Jl. Merdeka No. 37, Binangun, Cilacap</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#FF0000] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"></path></svg>
+              <span class="">0813 2709 9199</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#FF0000] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"></path></svg>
+              <span class="">driveoshowroom@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Media Sosial -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-widest text-white mb-4">MEDIA SOSIAL</h4>
+          <ul class="space-y-2.5 text-xs font-normal text-gray-400">
+            <li class=""><a href="javascript:void(0)" class="hover:text-white transition-colors">Instagram</a></li>
+            <li class=""><a href="javascript:void(0)" class="hover:text-white transition-colors">Facebook</a></li>
+            <li class=""><a href="javascript:void(0)" class="hover:text-white transition-colors">YouTube</a></li>
+            <li class=""><a href="javascript:void(0)" class="hover:text-white transition-colors">TikTok</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-normal text-gray-500 gap-4">
+        <p class="">© 2026 DRIVEO. Hak Cipta Dilindungi</p>
+        <div class="flex gap-6">
+          <a href="javascript:void(0)" class="hover:text-gray-400 transition-colors">Kebijakan Privasi</a>
+          <a href="javascript:void(0)" class="hover:text-gray-400 transition-colors">Syarat &amp; Ketentuan</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== 8. FLOATING DRIVEO AI BOT ==================== -->
+  <!-- Floating AI Assistant Button -->
+
+
+<!-- DRIVEO AI Chat Popup Modal -->
+
+
+  <!-- ==================== 9. JAVASCRIPT: DATA LAYER & INTERAKSI ==================== -->
+  <script>
+    /**
+     * STRUKTUR DATA KENDARAAN TERPISAH (MODULAR CONTENT LAYER)
+     * Struktur ini memungkinkan pergantian unit dari Toyota Fortuner -> Avanza / CR-V / Pajero
+     * secara instan tanpa mendesain ulang halaman.
+     */
+    const vehicleData = {
+      id: "DRV-FT28G",
+      brand: "Toyota",
+      model: "Fortuner 2.8 VRZ",
+      year: "2023",
+      price: "Rp 525.000.000",
+      priceNumeric: 525000000,
+      mileage: "28.000 km",
+      transmission: "Automatic",
+      fuel: "Diesel",
+      color: "Hitam Metalik",
+      condition: "Bekas (Terawat)",
+      
+      // Foto-foto
+      mainPhoto: "https://lh3.googleusercontent.com/aida/AEtjO1XRpMxBnj6yXCPOd41cjpm_y7d8cxFLmek86RrBpEkPlL3bCrv5fql0Z2NhvrsY2Uu5cp1E_PYeT1noH9NqO-1WYKZzKEvONbjdk1_oBAb4ay-bXnhpOrvb6zk0M3goEfvo8RA_JQ_rAHfJaIXhy2-7gZCx-mf9WLNfs51Rf8BaDjeJRTSkHe3l4vZiufqSYR2L7W5qKHgvvlHlBWuUyGs5nh_8j_n7-JWLvrUCsga_4Odh1UTMd1EUSw",
+      gallery: [
+        { label: "Depan", src: "https://lh3.googleusercontent.com/aida/AEtjO1XRpMxBnj6yXCPOd41cjpm_y7d8cxFLmek86RrBpEkPlL3bCrv5fql0Z2NhvrsY2Uu5cp1E_PYeT1noH9NqO-1WYKZzKEvONbjdk1_oBAb4ay-bXnhpOrvb6zk0M3goEfvo8RA_JQ_rAHfJaIXhy2-7gZCx-mf9WLNfs51Rf8BaDjeJRTSkHe3l4vZiufqSYR2L7W5qKHgvvlHlBWuUyGs5nh_8j_n7-JWLvrUCsga_4Odh1UTMd1EUSw" },
+        { label: "Belakang", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDDawwogurWbranZXvxKhP99_nk4uDPhXNQx7Jk_jIXDnqQ9cSqyM0gXM5cbhQtF7ZnmGJZt3AL2AHZ2Mpt7SCNDMcYhr5sYZqj5ctzrQAt7ikxGgEPneTjEB-2X96NPxlpmZP-oGAh4G8gZXKWj5AFJR5JpDC9P4v1-rWmkVKLOdiCQKX-1rk5GMU2PVBlpIut1yxb0lM2oWO-Z_wFvxUKV2vxWWZUlZCiigfGICez24fvHG1-EXYFqw" },
+        { label: "Interior", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAuKYU5NptfatOpvBZlfHX_jX30ZeSvNa4I7lvJcF0j4U3fSABxkKbeUzzFPxL7AOGV5wuZUz3PHkCLak5s1SsyRDI4fuBNfR-XSz9pyUdCLR3asUvX82_sjpCJLk2o7pU2tDnXXiQ2OJRhfwGvdVWmKQsqxWUqQ-IMVL7U1i3hYs1KdXBBs5viB0rw8taHVwiV35l-zV2Rf2TQlMI_XUADIj0jytff82KTjT5MMZypyJ155qTvCeftjA" },
+        { label: "Showroom", src: "https://lh3.googleusercontent.com/aida/AEtjO1Vnf-_iwAW0quvI7RvvBefsLJMPNjjY1ouctMF3mlY9-Q7gAXTcw9n5CUQt_lfD1K8XDDUSvnLj2801ptgdZSSKLaDTbnlkdN-E3msYxfuH-KBUfVy-W1YpulFeiOX5Gu9Yq7M4raPBVvnGY2HLg5znj-vD_6v3MFkLj2C7fMu8LLO_4b2OI0qkfUCgCcJ0e-uE7GBwi_eL7QEyU0TdwgOxMViuV8hLatY_P5J15UgOQ5eJNxhDHt1I49A" }
+      ],
+
+      // Spesifikasi Teknis
+      specifications: {
+        engine: "2.8L 1GD-FTV Diesel Turbo",
+        power: "203 PS @ 3.400 RPM",
+        transmission: "Automatic 6-Speed Sport Sequential",
+        drive: "4x2 (RWD)",
+        capacity: "7 Penumpang",
+        year: "2023",
+        mileage: "28.000 km (Record Rutin)",
+        legality: "BPKB, STNK, Faktur Komplit"
+      },
+
+      // Deskripsi
+      description: `Toyota Fortuner 2.8 VRZ tahun 2023 dengan kondisi terawat dan siap digunakan. Kendaraan memiliki tampilan elegan, kabin luas, serta performa yang cocok untuk kebutuhan keluarga maupun perjalanan jarak jauh.`
+    };
+
+    /**
+     * Mengganti Foto Utama pada Galeri Mobil
+     */
+    function switchGalleryImage(src, buttonElement) {
+      const mainImg = document.getElementById('main-car-image');
+      if (mainImg) {
+        mainImg.style.opacity = '0.3';
+        setTimeout(() => {
+          mainImg.src = src;
+          mainImg.style.opacity = '1';
+        }, 150);
+      }
+
+      // Update styling thumbnail active
+      const thumbnails = document.querySelectorAll('.thumb-item');
+      thumbnails.forEach(t => {
+        t.classList.remove('border-[#FF0000]');
+        t.classList.add('border-[#E5E7EB]');
+      });
+
+      if (buttonElement) {
+        buttonElement.classList.remove('border-[#E5E7EB]');
+        buttonElement.classList.add('border-[#FF0000]');
+      }
+    }
+
+    /**
+     * Direct Navigation ke Halaman Lain yang Sudah Ada di Project DRIVEO
+     */
+    function navigateTo(page) {
+      const routes = {
+        home: "{{DATA:SCREEN:SCREEN_13}}",
+        about: "{{DATA:SCREEN:SCREEN_12}}",
+        catalog: "/detail-mobil",
+        contact: "{{DATA:SCREEN:SCREEN_4}}"
+      };
+
+      console.log("Navigating to DRIVEO:", page);
+      // Di platform Stitch interaksi berpindah halaman
+      if (routes[page]) {
+        // Fallback navigasi internal
+        window.location.hash = page;
+      }
+    }
+
+    /**
+     * Direct WhatsApp Action
+     */
+    function openWhatsApp(customText) {
+      const phone = "6281327099199";
+      const encodedMsg = encodeURIComponent(customText || "Halo DRIVEO Showroom, saya tertarik dengan unit mobil.");
+      window.open(`https://wa.me/${phone}?text=${encodedMsg}`, '_blank');
+    }
+
+    /**
+     * Toggle DRIVEO AI Popup Chat
+     */
+    function toggleAiChat() {
+      const popup = document.getElementById('ai-chat-popup');
+      if (popup) {
+        popup.classList.toggle('hidden');
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- ==================== LOGIN MODAL (DRIVEO) ==================== -->
+<div id="loginModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-all duration-200" onclick="if(event.target===this){window.closeLoginModal ? window.closeLoginModal() : (this.classList.add('hidden'),this.classList.remove('flex'))}">
+  <div class="relative bg-white rounded-2xl w-full max-w-[340px] p-6 border border-zinc-200 shadow-xl transition-transform duration-200" onclick="event.stopPropagation()"><!-- Header: DRIVEO Logo & Close Button -->
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center">
+        <svg class="h-[16px] w-[90px] flex-shrink-0" fill="none" height="18" viewBox="0 0 102 18" width="102" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.92001 0.479998C9.36001 0.479998 10.664 0.663998 11.832 1.032C13.016 1.384 14.024 1.912 14.856 2.616C15.704 3.32 16.36 4.2 16.824 5.256C17.288 6.296 17.52 7.504 17.52 8.88C17.52 10.256 17.288 11.472 16.824 12.528C16.36 13.568 15.704 14.44 14.856 15.144C14.024 15.848 13.016 16.384 11.832 16.752C10.664 17.104 9.36001 17.28 7.92001 17.28H7.33137e-06V0.479998H7.92001ZM3.48001 2.28V15.48H7.92001C8.73601 15.48 9.49601 15.36 10.2 15.12C10.92 14.864 11.544 14.472 12.072 13.944C12.6 13.4 13.016 12.712 13.32 11.88C13.64 11.048 13.8 10.048 13.8 8.88C13.8 7.712 13.64 6.712 13.32 5.88C13.016 5.048 12.6 4.368 12.072 3.84C11.544 3.296 10.92 2.904 10.2 2.664C9.49601 2.408 8.73601 2.28 7.92001 2.28H3.48001ZM28.7963 0.479998C29.9963 0.479998 31.0683 0.615998 32.0123 0.887998C32.9723 1.144 33.7803 1.528 34.4363 2.04C35.0923 2.536 35.5963 3.152 35.9483 3.888C36.3003 4.608 36.4763 5.432 36.4763 6.36C36.4763 7.64 36.1563 8.72 35.5163 9.6C34.8763 10.48 33.9563 11.152 32.7563 11.616L36.7163 17.28H32.7563L29.2283 12.24H28.7963H23.6363V17.28H20.1563V0.479998H28.7963ZM23.6363 2.28V10.44H28.7963C30.0603 10.44 31.0363 10.112 31.7243 9.456C32.4123 8.784 32.7563 7.752 32.7563 6.36C32.7563 4.968 32.4123 3.944 31.7243 3.288C31.0363 2.616 30.0603 2.28 28.7963 2.28H23.6363ZM42.8316 17.28H39.3516V0.479998H42.8316V17.28ZM54.3553 15.24H54.5953L60.6193 0.479998H64.1953L57.3553 17.28H51.5953L44.7553 0.479998H48.3313L54.3553 15.24ZM69.5972 2.28V7.8H78.3572V9.6H69.5972V15.48H80.7572V17.28H66.1172V0.479998H80.7572V2.28H69.5972Z" fill="#111111"></path>
+          <path d="M91.5497 1.68C90.7337 1.68 89.9657 1.824 89.2457 2.112C88.5417 2.4 87.9257 2.84 87.3977 3.432C86.8697 4.024 86.4457 4.776 86.1257 5.688C85.8217 6.584 85.6697 7.648 85.6697 8.88C85.6697 10.112 85.8217 11.184 86.1257 12.096C86.4457 12.992 86.8697 13.736 87.3977 14.328C87.9257 14.92 88.5417 15.36 89.2457 15.648C89.9657 15.936 90.7337 16.08 91.5497 16.08C92.3657 16.08 93.1257 15.936 93.8297 15.648C94.5497 15.36 95.1737 14.92 95.7017 14.328C96.2297 13.736 96.6457 12.992 96.9497 12.096C97.2697 11.184 97.4297 10.112 97.4297 8.88C97.4297 7.648 97.2697 6.584 96.9497 5.688C96.6457 4.776 96.2297 4.024 95.7017 3.432C95.1737 2.84 94.5497 2.4 93.8297 2.112C93.1257 1.824 92.3657 1.68 91.5497 1.68ZM91.5497 -1.90735e-06C92.9897 -1.90735e-06 94.2937 0.191998 95.4617 0.575998C96.6457 0.959998 97.6537 1.528 98.4857 2.28C99.3337 3.032 99.9897 3.96 100.454 5.064C100.918 6.168 101.15 7.44 101.15 8.88C101.15 10.32 100.918 11.592 100.454 12.696C99.9897 13.8 99.3337 14.728 98.4857 15.48C97.6537 16.232 96.6457 16.8 95.4617 17.184C94.2937 17.568 92.9897 17.76 91.5497 17.76C90.1097 17.76 88.7977 17.568 87.6137 17.184C86.4297 16.8 85.4137 16.232 84.5657 15.48C83.7337 14.728 83.0857 13.8 82.6217 12.696C82.1737 11.592 81.9497 10.32 81.9497 8.88C81.9497 7.44 82.1737 6.168 82.6217 5.064C83.0857 3.96 83.7337 3.032 84.5657 2.28C85.4137 1.528 86.4297 0.959998 87.6137 0.575998C88.7977 0.191998 90.1097 -1.90735e-06 91.5497 -1.90735e-06Z" fill="#FF0000"></path>
+        </svg>
+      </div>
+      <button type="button" onclick="document.getElementById('loginModal').classList.add('hidden')" class="text-zinc-400 hover:text-brand-black text-xl leading-none font-light p-1 cursor-pointer transition-colors" aria-label="Tutup Login">
+        ✕
+      </button>
+    </div>
+
+    <!-- Tab Switch Pill (USER / ADMIN) -->
+    <div class="bg-zinc-100 p-1 rounded-xl flex mb-3">
+      <button id="tabUserBtn" type="button" onclick="document.getElementById('tabUserBtn').className='flex-1 py-1.5 rounded-md text-[11px] font-semibold transition uppercase tracking-wider bg-white shadow-sm text-black'; document.getElementById('tabAdminBtn').className='flex-1 py-1.5 rounded-md text-[11px] font-semibold transition uppercase tracking-wider text-gray-400 hover:text-black'; const b = document.getElementById('loginModalBadge'); if(b) b.classList.add('hidden'); const t = document.getElementById('loginModalTitle'); if(t) t.textContent='LOGIN'; const d = document.getElementById('loginModalDesc'); if(d) d.textContent='Masuk untuk melanjutkan ke DRIVEO.'; const el = document.getElementById('loginEmailLabel'); if(el) el.textContent='EMAIL'; const ei = document.getElementById('loginEmailInput'); if(ei) ei.placeholder='Masukkan email'; const uo = document.getElementById('userExtraOptions'); if(uo) { uo.classList.remove('hidden'); uo.classList.add('flex'); } const fn = document.getElementById('adminFooterNote'); if(fn) fn.innerHTML='Belum punya akun? &lt;a href=\'#\' class=\'font-bold text-black hover:underline\'&gt;Daftar&lt;/a&gt;';" class="text-zinc-500 font-normal py-1.5 px-4 rounded-lg flex-1 text-center text-xs tracking-wider uppercase hover:text-zinc-700 transition cursor-pointer">
+        USER
+      </button>
+      <button id="tabAdminBtn" type="button" onclick="document.getElementById('tabAdminBtn').className='flex-1 py-1.5 rounded-md text-[11px] font-semibold transition uppercase tracking-wider bg-white shadow-sm text-black'; document.getElementById('tabUserBtn').className='flex-1 py-1.5 rounded-md text-[11px] font-semibold transition uppercase tracking-wider text-gray-400 hover:text-black'; const b = document.getElementById('loginModalBadge'); if(b) b.classList.remove('hidden'); const t = document.getElementById('loginModalTitle'); if(t) t.textContent='LOGIN ADMIN'; const d = document.getElementById('loginModalDesc'); if(d) d.textContent='Masuk untuk mengelola data showroom DRIVEO.'; const el = document.getElementById('loginEmailLabel'); if(el) el.textContent='EMAIL ADMIN'; const ei = document.getElementById('loginEmailInput'); if(ei) ei.placeholder='Masukkan email admin'; const uo = document.getElementById('userExtraOptions'); if(uo) { uo.classList.add('hidden'); uo.classList.remove('flex'); } const fn = document.getElementById('adminFooterNote'); if(fn) fn.textContent='Akses ini khusus untuk administrator DRIVEO.';" class="bg-white shadow-sm text-zinc-900 font-semibold py-1.5 px-4 rounded-lg flex-1 text-center text-xs tracking-wider uppercase transition cursor-pointer">
+        ADMIN
+      </button>
+    </div>
+
+    <!-- Badge Portal Internal -->
+    <div id="loginModalBadge" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-zinc-100 text-[9px] font-semibold text-zinc-700 tracking-wider mb-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#FF0000]"></span>
+      PORTAL INTERNAL
+    </div>
+
+    <!-- Form Login Title & Subtitle -->
+    <div class="mb-3 text-left">
+      <h3 id="loginModalTitle" class="text-[16px] font-bold text-zinc-900 tracking-tight mb-0.5">LOGIN ADMIN</h3>
+      <p id="loginModalDesc" class="text-[10px] text-zinc-500 mb-4">Masuk untuk mengelola data showroom DRIVEO</p>
+    </div>
+
+    <!-- Form Fields -->
+    <form onsubmit="event.preventDefault(); alert('Login berhasil diproses.'); document.getElementById('loginModal').classList.add('hidden');" class="space-y-3">
+      <!-- Field EMAIL -->
+      <div class="text-left">
+        <label id="loginEmailLabel" class="block text-[10px] font-semibold tracking-wider text-zinc-800 uppercase mb-1">EMAIL ADMIN</label>
+        <input id="loginEmailInput" type="email" required="" placeholder="Masukkan email admin" class="bg-zinc-50 border border-zinc-200/80 rounded-lg px-3 py-2 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-[#FF0000] focus:bg-white transition w-full">
+      </div>
+
+      <!-- Field PASSWORD -->
+      <div class="text-left">
+        <label id="loginPasswordLabel" class="block text-[10px] font-semibold tracking-wider text-zinc-800 uppercase mb-1">PASSWORD</label>
+        <div class="relative">
+          <input id="loginPasswordInput" type="password" required="" placeholder="Masukkan password" class="bg-zinc-50 border border-zinc-200/80 rounded-lg px-3 py-2 text-xs text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-[#FF0000] focus:bg-white transition w-full pr-10">
+          <button type="button" onclick="driveoTogglePasswordVisibility('loginPasswordInput', this)" class="absolute inset-y-0 right-0 pr-3 flex items-center text-zinc-400 hover:text-zinc-600 cursor-pointer" aria-label="Lihat password" aria-pressed="false">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path data-password-slash d="M5 19 19 5" stroke-linecap="round" stroke-linejoin="round" style="display:none"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Extra options for USER (Ingat saya) -->
+      <div id="userExtraOptions" class="hidden items-center justify-between text-[10px] text-zinc-500 pt-1">
+        <label class="flex items-center gap-1.5 cursor-pointer">
+          <input type="checkbox" class="rounded border-zinc-300 text-brand-red focus:ring-0">
+          <span class="">Ingat Saya</span>
+        </label>
+        
+      </div>
+
+      <!-- Tombol Submit Merah MASUK -->
+      <button type="submit" class="w-full h-[32px] bg-[#FF0000] text-white font-semibold text-[11px] rounded-lg shadow-sm hover:bg-red-600 transition-colors flex items-center justify-center gap-1 mt-4 tracking-wide">
+        <span class="">MASUK →</span>
+      </button>
+
+      <!-- Footer Modal -->
+      <p id="adminFooterNote" class="text-[9px] text-zinc-400 text-center mt-3">Akses ini khusus untuk administrator DRIVEO</p>
+    </form></div>
+</div>
+
+<script>
+  function openLoginModal() {
+    const modal = document.getElementById('loginModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+    }
+  }
+
+  function closeLoginModal() {
+    const modal = document.getElementById('loginModal');
+    if (modal) {
+      modal.classList.add('hidden');
+    }
+  }
+
+  function switchLoginTab(role) {
+    const userBtn = document.getElementById('tab-user-btn');
+    const adminBtn = document.getElementById('tab-admin-btn');
+    const title = document.getElementById('login-title');
+    const subtitle = document.getElementById('login-subtitle');
+
+    if (role === 'admin') {
+      adminBtn.className = 'bg-white text-black font-semibold shadow-sm py-2 px-6 rounded-lg flex-1 text-center text-xs tracking-wider uppercase transition cursor-pointer';
+      userBtn.className = 'text-gray-400 font-semibold py-2 px-6 rounded-lg flex-1 text-center text-xs tracking-wider uppercase hover:text-gray-700 transition cursor-pointer';
+      if (title) title.innerText = 'LOGIN ADMIN';
+      if (subtitle) subtitle.innerText = 'Masuk ke portal operasional showroom DRIVEO.';
+    } else {
+      userBtn.className = 'bg-white text-black font-semibold shadow-sm py-2 px-6 rounded-lg flex-1 text-center text-xs tracking-wider uppercase transition cursor-pointer';
+      adminBtn.className = 'text-gray-400 font-semibold py-2 px-6 rounded-lg flex-1 text-center text-xs tracking-wider uppercase hover:text-gray-700 transition cursor-pointer';
+      if (title) title.innerText = 'LOGIN';
+      if (subtitle) subtitle.innerText = 'Masuk untuk melanjutkan ke DRIVEO.';
+    }
+  }
+
+  function togglePasswordVisibility() {
+    const passInput = document.getElementById('login-password-input');
+    const eyeOpen = document.getElementById('eye-open-icon');
+    const eyeClosed = document.getElementById('eye-closed-icon');
+    if (passInput) {
+      if (passInput.type === 'password') {
+        passInput.type = 'text';
+        eyeOpen.classList.add('hidden');
+        eyeClosed.classList.remove('hidden');
+      } else {
+        passInput.type = 'password';
+        eyeOpen.classList.remove('hidden');
+        eyeClosed.classList.add('hidden');
+      }
+    }
+  }
+
+  // Support ESC key to close modal
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeLoginModal();
+    }
+  });
+</script>
+
+
+<script>
+(function () {
+  const routes = {
+    'BERANDA': '/beranda',
+    'TENTANG KAMI': '/tentang-kami',
+    'KATALOG': '/katalog',
+    'KATALOG MOBIL': '/katalog',
+    'HUBUNGI KAMI': '/kontak',
+    'KONTAK': '/kontak',
+    'LIHAT KATALOG': '/katalog',
+    'LIHAT SEMUA MOBIL': '/katalog',
+    'JELAJAHI MOBIL': '/katalog',
+    'CARI MOBIL': '/katalog',
+    'DETAIL MOBIL': '/detail-mobil'
+  };
+
+  document.addEventListener('click', function (event) {
+    const a = event.target.closest('a');
+    if (!a) return;
+    const text = (a.textContent || '').replace(/\s+/g, ' ').trim().toUpperCase();
+    const key = Object.keys(routes).find(k => text === k || text.startsWith(k + ' ') || text.startsWith(k + ' →'));
+    if (!key) return;
+    if (a.target === '_blank') return;
+    event.preventDefault();
+    event.stopPropagation();
+    if (window.parent && window.parent !== window) {
+      window.parent.history.pushState({}, '', routes[key]);
+      window.parent.dispatchEvent(new PopStateEvent('popstate'));
+    } else {
+      window.location.href = routes[key];
+    }
+  }, true);
+})();
+</script>
+
+
+<script src="/stitch-pages/driveo-auth.js"></script>
+
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end" id="driveo-ai-widget"><div class="hidden mb-4 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-[#E5E5E5] overflow-hidden flex-col transition-all duration-200 transform origin-bottom-right" id="aiChatPopup"><div class="bg-[#111111] text-white px-5 py-4 flex items-center justify-between border-b border-[#262626]"><div class="flex items-center gap-3"><div class="driveo-ai-avatar-frame"><img src="/images/driveo-ai-avatar-premium.png" alt="Avatar DRIVEO AI" /></div><div><div class="flex items-center gap-2"><span class="text-sm font-semibold">DRIVEO AI</span><span class="w-2 h-2 rounded-full bg-emerald-500"></span></div><p class="text-[11px] text-white/60">Online • Asisten Rekomendasi Kendaraan</p></div></div><button aria-label="Tutup AI Chat" class="text-white/60 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors" id="closeAiChatBtn" onclick="document.getElementById('aiChatPopup').classList.add('hidden');document.getElementById('aiChatPopup').classList.remove('flex');" type="button"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div><div class="p-4 max-h-80 overflow-y-auto space-y-3 bg-[#FBFBFC] text-xs font-sans" id="ai-chat-messages"><div class="flex gap-2.5 max-w-[90%]"><div class="driveo-ai-message-avatar"><img src="/images/driveo-ai-avatar-premium.png" alt="Avatar DRIVEO AI" /></div><div class="bg-white p-3 rounded-2xl rounded-tl-sm border border-[#E5E5E5] text-[#0D0D0D] shadow-sm leading-relaxed"><strong>Selamat datang di DRIVEO</strong><br><br>Saya siap membantu Anda menemukan kendaraan yang sesuai dengan kebutuhan, preferensi, dan anggaran Anda<br><br>Sampaikan kriteria kendaraan yang Anda cari. Saya akan menganalisis kebutuhan Anda dan memberikan rekomendasi berdasarkan spesifikasi serta ketersediaan kendaraan<br><br><strong>Contoh kebutuhan:</strong><br>&quot;Saya mencari mobil keluarga dengan anggaran maksimal Rp200 juta, irit BBM, dan berkapasitas 7 penumpang.&quot;</div></div><div class="space-y-2 pl-9" id="driveo-chat-options"><button class="w-full text-left p-2.5 rounded-xl bg-white border border-[#E5E5E5] hover:border-[#FF0000] hover:shadow-sm transition-all group cursor-pointer flex items-start gap-2.5" onclick="handleAiPrompt('Mobil Keluarga')" type="button"><span class="text-base leading-none mt-0.5">🚗</span><div><div class="font-bold text-xs text-[#0D0D0D] group-hover:text-[#FF0000] transition-colors">Mobil Keluarga</div><p class="text-[11px] text-[#737373] mt-0.5 leading-snug">Rekomendasi kendaraan sesuai kebutuhan keluarga</p></div></button><button class="w-full text-left p-2.5 rounded-xl bg-white border border-[#E5E5E5] hover:border-[#FF0000] hover:shadow-sm transition-all group cursor-pointer flex items-start gap-2.5" onclick="handleAiPrompt('Mobil Harian')" type="button"><span class="text-base leading-none mt-0.5">🛣️</span><div><div class="font-bold text-xs text-[#0D0D0D] group-hover:text-[#FF0000] transition-colors">Mobil Harian</div><p class="text-[11px] text-[#737373] mt-0.5 leading-snug">Temukan kendaraan untuk aktivitas sehari-hari</p></div></button><button class="w-full text-left p-2.5 rounded-xl bg-white border border-[#E5E5E5] hover:border-[#FF0000] hover:shadow-sm transition-all group cursor-pointer flex items-start gap-2.5" onclick="handleAiPrompt('SUV atau MPV')" type="button"><span class="text-base leading-none mt-0.5">🚙</span><div><div class="font-bold text-xs text-[#0D0D0D] group-hover:text-[#FF0000] transition-colors">SUV atau MPV</div><p class="text-[11px] text-[#737373] mt-0.5 leading-snug">Pertimbangkan pilihan SUV atau MPV yang tersedia</p></div></button></div></div><div class="p-3 bg-white border-t border-[#E5E5E5]"><form class="flex items-center gap-2" onsubmit="event.preventDefault(); handleDriveoAiSubmit();"><input id="aiChatInput" class="flex-1 text-xs px-3.5 py-2.5 rounded-full border border-[#E5E5E5] focus:outline-none focus:border-[#FF0000] bg-[#F5F5F7]" placeholder="Tuliskan kebutuhan mobil Anda..." type="text"><button aria-label="Kirim Kebutuhan" class="w-9 h-9 rounded-full bg-[#FF0000] hover:bg-[#D90000] text-white flex items-center justify-center transition-colors shadow-sm shrink-0" type="submit"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></form></div></div><button aria-label="Buka DRIVEO AI Assistant" class="w-14 h-14 bg-[#FF0000] rounded-full shadow-2xl flex items-center justify-center text-white relative hover:scale-105 transition-all duration-300 cursor-pointer" id="floatingAiBtn" onclick="const p=document.getElementById('aiChatPopup'); if(p.classList.contains('hidden')){p.classList.remove('hidden');p.classList.add('flex');}else{p.classList.add('hidden');p.classList.remove('flex');}" title="DRIVEO AI Recommendation" type="button"><img src="/images/driveo-ai-button.png" alt="Robot DRIVEO AI" class="driveo-ai-button-mark" /><span class="absolute top-0 right-0 w-3 h-3 bg-white rounded-full border-2 border-[#FF0000]" style="animation: 1.5s ease-in-out 0s infinite normal none running pulseDot;" aria-hidden="true"></span></button></div>
+
+<style id="driveo-ai-responsive-unified">
+#driveo-ai-widget{position:fixed!important;right:24px!important;bottom:24px!important;z-index:9999!important;align-items:flex-end!important}
+#aiChatPopup{width:min(384px,calc(100vw - 24px))!important;max-width:calc(100vw - 24px)!important;max-height:min(640px,calc(100dvh - 104px))!important}
+#ai-chat-messages{max-height:min(320px,calc(100dvh - 300px));overflow-y:auto;overscroll-behavior:contain}
+#floatingAiBtn{flex-shrink:0;touch-action:manipulation}
+@media(max-width:640px){#driveo-ai-widget{right:12px!important;bottom:12px!important}#aiChatPopup{width:calc(100vw - 24px)!important;max-height:calc(100dvh - 88px)!important;margin-bottom:12px!important;border-radius:18px!important}#ai-chat-messages{max-height:calc(100dvh - 285px)!important;min-height:120px!important;padding:12px!important}#floatingAiBtn{width:52px!important;height:52px!important}#floatingAiBtn svg{width:26px!important;height:26px!important}}
+</style>
+<script src="/stitch-pages/driveo-ai.js"></script>
+<style id="driveo-responsive-refinement">
+/* Responsive refinements for existing DRIVEO layouts; no visual redesign. */
+*, *::before, *::after { box-sizing: border-box; }
+img, video, canvas { max-width: 100%; height: auto; }
+input, select, textarea, button { min-width: 0; }
+@media (max-width: 1023px) {
+  html, body { max-width: 100%; overflow-x: clip; }
+  main, section, footer, header { min-width: 0; }
+  input, select, textarea { max-width: 100%; }
+  table { max-width: 100%; }
+  .overflow-x-auto { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  #modal-tambah, #modal-edit, #modal-login, #modal-register {
+    padding: 12px !important;
+  }
+  #modal-tambah > div, #modal-edit > div {
+    width: min(100%, 760px) !important;
+    max-height: calc(100dvh - 24px) !important;
+    overflow-y: auto !important;
+  }
+}
+@media (max-width: 767px) {
+  html, body { width: 100%; min-width: 0; }
+  main, section, footer, header, nav { max-width: 100%; }
+  #catalogFilterSection { padding-left: 12px !important; padding-right: 12px !important; }
+  #catalogFilterSection > div { padding: 14px !important; }
+  #catalogFilterSection input, #catalogFilterSection select {
+    width: 100% !important; min-width: 0 !important; font-size: 13px !important;
+  }
+  #catalogFilterSection .grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #catalogFilterSection .grid > div { min-width: 0 !important; width: 100% !important; }
+  #catalogFilterSection select { text-overflow: ellipsis; }
+  #catalogFilterSection h2 { font-size: 17px !important; }
+  #catalogFilterSection .flex.items-center.justify-between { align-items: flex-start !important; gap: 8px !important; }
+  #catalogFilterSection .flex.items-center.justify-between > span:last-child { max-width: 48%; font-size: 10px !important; }
+  #form-tambah .grid, #form-edit .grid { grid-template-columns: minmax(0, 1fr) !important; }
+  #form-tambah input, #form-tambah select, #form-tambah textarea,
+  #form-edit input, #form-edit select, #form-edit textarea { width: 100%; min-width: 0; }
+  #form-tambah, #form-edit { padding: 14px !important; }
+  #modal-tambah, #modal-edit { padding: 8px !important; }
+  #modal-tambah > div, #modal-edit > div {
+    width: 100% !important; max-width: 100% !important;
+    max-height: calc(100dvh - 16px) !important; margin: 0 auto !important;
+  }
+  #driveo-ai-widget { right: 12px !important; bottom: 12px !important; }
+  #ai-chat-popup { left: 12px !important; right: 12px !important; width: auto !important; max-width: none !important; }
+  .overflow-x-auto { max-width: 100%; }
+  pre, code { white-space: pre-wrap; overflow-wrap: anywhere; }
+}
+@media (max-width: 359px) {
+  #catalogFilterSection .grid { grid-template-columns: minmax(0, 1fr) !important; }
+  #catalogFilterSection .flex.items-center.justify-between { flex-direction: column !important; }
+  #catalogFilterSection .flex.items-center.justify-between > span:last-child { max-width: 100%; }
+}
+</style>
+
+<style id="driveo-responsive-final">
+/* Responsive-only corrections; retain existing DRIVEO visual identity and functionality. */
+*,*::before,*::after{box-sizing:border-box}
+html{width:100%;max-width:100%;scroll-behavior:smooth}
+body{width:100%;max-width:100%;min-width:0;overflow-x:hidden}
+img,video,iframe,svg,canvas{max-width:100%}
+input,select,textarea,button{min-width:0;max-width:100%;font:inherit}
+main,header,nav,section,footer,article,aside,form,div{min-width:0}
+pre,code{overflow-wrap:anywhere;white-space:pre-wrap}
+@media(max-width:1023px){
+  .container,.max-w-screen-xl,.max-w-screen-2xl{max-width:100%;}
+  table{display:block;max-width:100%;overflow-x:auto}
+  .overflow-x-auto{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  [role=dialog],[aria-modal=true]{max-width:calc(100vw - 24px)}
+}
+@media(max-width:767px){
+  body{font-size:14px}
+  main,section,header,footer,nav{max-width:100%;}
+  section[class*="px-"],footer[class*="px-"],header[class*="px-"]{padding-left:16px!important;padding-right:16px!important}
+  h1{overflow-wrap:anywhere;line-height:1.12}
+  h2{overflow-wrap:anywhere}
+  input,select,textarea{max-width:100%;}
+  button{white-space:normal;overflow-wrap:anywhere}
+  img{object-fit:cover}
+  /* Catalog filter: constrain controls to their own grid cells. */
+  #catalogFilterSection{width:100%;max-width:100%;padding-left:12px!important;padding-right:12px!important}
+  #catalogFilterSection>div{width:100%;max-width:100%;padding:14px!important}
+  #catalogFilterSection .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+  #catalogFilterSection .grid>div{width:100%;max-width:100%;min-width:0!important;overflow:hidden}
+  #catalogFilterSection input,#catalogFilterSection select{display:block;width:100%!important;max-width:100%!important;min-width:0!important;height:42px;padding-left:9px!important;padding-right:22px!important;font-size:12px!important;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+  #catalogFilterSection label{display:block;max-width:100%;overflow-wrap:anywhere;font-size:10px!important}
+  #catalogFilterSection h2{font-size:17px!important}
+  #catalogFilterSection .flex.items-center.justify-between{align-items:flex-start!important;gap:8px!important;flex-wrap:wrap}
+  #catalogFilterSection .flex.items-center.justify-between>span:last-child{max-width:48%;font-size:10px!important}
+  #catalogFilterSection button{min-height:40px;padding:10px 14px!important}
+  #catalogGridSection{width:100%;max-width:100%;padding-left:16px!important;padding-right:16px!important}
+  #catalogGridSection h2{font-size:20px!important;flex-wrap:wrap;gap:8px!important}
+  #catalogGridSection>div:first-child{min-width:0;align-items:stretch}
+  #catalogGridSection>div:first-child>div:last-child{width:100%;max-width:100%;flex-wrap:wrap}
+  #catalogSortSelect{width:100%;max-width:100%;min-width:0;font-size:12px!important;text-overflow:ellipsis}
+  #carsGridContainer{grid-template-columns:minmax(0,1fr)!important;gap:16px!important}
+  #carsGridContainer>*{width:100%;max-width:100%;min-width:0}
+  #carsGridContainer img{max-width:100%}
+  /* Forms and admin modals remain inside the viewport and scroll vertically. */
+  #form-tambah .grid,#form-edit .grid{grid-template-columns:minmax(0,1fr)!important}
+  #form-tambah input,#form-tambah select,#form-tambah textarea,#form-edit input,#form-edit select,#form-edit textarea{width:100%;max-width:100%;min-width:0}
+  #form-tambah,#form-edit{padding:14px!important}
+  #modal-tambah,#modal-edit,#modal-login,#modal-register{padding:8px!important}
+  #modal-tambah>div,#modal-edit>div{width:100%!important;max-width:100%!important;max-height:calc(100dvh - 16px)!important;overflow-y:auto!important;margin:0 auto!important}
+  #driveo-ai-widget{right:12px!important;bottom:12px!important}
+  #ai-chat-popup{left:12px!important;right:12px!important;width:auto!important;max-width:none!important;max-height:70dvh;overflow-y:auto}
+  .overflow-x-auto{max-width:100%}
+}
+@media(max-width:420px){
+  #catalogFilterSection .grid{grid-template-columns:minmax(0,1fr)!important}
+  #catalogFilterSection .flex.items-center.justify-between{flex-direction:column!important}
+  #catalogFilterSection .flex.items-center.justify-between>span:last-child{max-width:100%}
+  #catalogFilterSection .flex.items-center.justify-between>div{width:100%;justify-content:space-between}
+  #catalogFilterSection button{flex:0 1 auto}
+}
+@media(max-width:359px){
+  section[class*="px-"],footer[class*="px-"],header[class*="px-"]{padding-left:12px!important;padding-right:12px!important}
+  #catalogFilterSection>div{padding:12px!important}
+  #catalogFilterSection .grid{grid-template-columns:minmax(0,1fr)!important}
+}
+</style>
+
+
+<style id="driveo-footer-layout-fix">
+/* Footer stays at the true end of every page; no trailing white gap. */
+html, body { height: auto !important; min-height: 100% !important; margin: 0 !important; padding-bottom: 0 !important; }
+body { display: flex !important; flex-direction: column !important; min-height: 100vh !important; height: auto !important; overflow-x: hidden !important; }
+body > footer { margin-top: auto !important; flex: 0 0 auto !important; width: 100% !important; }
+body > #driveo-ai-widget, body > #loginModal, body > #login-modal, body > #driveo-register-modal, body > #ai-chat-btn, body > #ai-chat-popup { position: fixed !important; }
+</style>
+<style id="driveo-home-detail-logo-size-fix">
+/* Halaman detail yang dibuka dari Beranda harus sama persis ukurannya dengan detail dari Katalog. */
+body:has(header a[title="DRIVEO Showroom"]) header a[title="DRIVEO Showroom"] svg {
+  width: 170px !important;
+  height: 30px !important;
+  flex: 0 0 170px !important;
+}
+</style>
+
+<style id="driveo-ai-polish-v2">
+#driveo-ai-widget{position:fixed!important;right:24px!important;bottom:24px!important;z-index:9999!important;align-items:flex-end!important}
+#aiChatPopup{width:400px!important;max-width:calc(100vw - 32px)!important;max-height:min(620px,calc(100dvh - 108px))!important;display:flex;flex-direction:column;overflow:hidden;border-radius:20px!important;box-shadow:0 18px 55px rgba(0,0,0,.22)!important}
+#aiChatPopup.hidden{display:none!important}
+#aiChatPopup>div:first-child{flex:0 0 auto;min-height:88px;padding:14px 20px!important}
+#aiChatPopup>div:first-child>div:first-child{gap:26px!important;min-width:0}
+#aiChatPopup>div:first-child>div:first-child>div:last-child{padding-left:2px!important;min-width:0}
+#ai-chat-messages{flex:1 1 auto;min-height:0!important;max-height:none!important;overflow-y:auto!important;padding:16px!important;overscroll-behavior:contain}
+#aiChatPopup>div:last-child{flex:0 0 auto;padding:12px!important}
+#driveo-ai-widget .driveo-ai-avatar-frame{width:56px;height:56px;flex:0 0 56px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid rgba(255,0,0,.35);display:flex;align-items:center;justify-content:center;padding:2px}
+#driveo-ai-widget .driveo-ai-avatar-frame img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;border-radius:50%}
+#driveo-ai-widget #ai-chat-messages .driveo-ai-message-avatar{width:44px;height:44px;flex:0 0 44px;overflow:hidden;border-radius:50%;background:#fff;border:1px solid #eee;display:flex;align-items:center;justify-content:center;padding:1px}
+#driveo-ai-widget #ai-chat-messages .driveo-ai-message-avatar img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;border-radius:50%}
+#floatingAiBtn{width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;padding:0!important;overflow:visible!important;background:#ff0000!important;border:0!important;box-shadow:0 8px 24px rgba(255,0,0,.25)!important}
+#floatingAiBtn>img{width:38px!important;height:38px!important;object-fit:contain!important;border-radius:0!important;display:block!important}
+#floatingAiBtn>span{width:15px!important;height:15px!important;top:0!important;right:0!important;animation:pulseDot 1.5s ease-in-out infinite!important}
+#driveo-chat-options{margin-top:12px!important;gap:8px!important}
+#driveo-chat-options>button{padding:12px!important;border-radius:14px!important;min-height:64px}
+#aiChatInput{min-width:0!important;font-size:14px!important}
+@media(max-width:640px){#driveo-ai-widget{right:12px!important;bottom:12px!important}#aiChatPopup{width:calc(100vw - 24px)!important;max-width:calc(100vw - 24px)!important;max-height:calc(100dvh - 92px)!important;margin-bottom:12px!important;border-radius:18px!important}#aiChatPopup>div:first-child{min-height:76px;padding:11px 12px!important}#aiChatPopup>div:first-child>div:first-child{gap:16px!important}#driveo-ai-widget .driveo-ai-avatar-frame{width:50px;height:50px;flex-basis:50px}#ai-chat-messages{padding:12px!important}#floatingAiBtn{width:54px!important;height:54px!important;min-width:54px!important;min-height:54px!important}#floatingAiBtn>img{width:34px!important;height:34px!important}#driveo-chat-options{padding-left:0!important}#driveo-chat-options>button{padding:10px!important}}
+@media(prefers-reduced-motion:reduce){#floatingAiBtn>span{animation:none!important}}
+</style>
+
+
+<style id="driveo-ai-final-unified-v3">
+/* One clean, centered robot system shared across every DRIVEO page */
+#driveo-ai-widget{position:fixed!important;right:24px!important;bottom:24px!important;z-index:9999!important;align-items:flex-end!important}
+#driveo-ai-widget #aiChatPopup{width:384px;max-width:calc(100vw - 24px);border-radius:20px!important;overflow:hidden!important}
+#driveo-ai-widget #aiChatPopup>div:first-child{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important}
+#driveo-ai-widget .driveo-ai-avatar-frame{width:56px!important;height:56px!important;flex:0 0 56px!important;border-radius:50%!important;overflow:hidden!important;background:#fff!important;border:1px solid rgba(255,0,0,.22)!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0!important;margin:0!important}
+#driveo-ai-widget .driveo-ai-avatar-frame img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:50% 50%!important;border-radius:50%!important;margin:0!important;padding:0!important;transform:none!important}
+#driveo-ai-widget #ai-chat-messages .driveo-ai-message-avatar{width:44px!important;height:44px!important;flex:0 0 44px!important;border-radius:50%!important;overflow:hidden!important;background:#fff!important;border:1px solid #eee!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0!important;margin-top:2px!important}
+#driveo-ai-widget #ai-chat-messages .driveo-ai-message-avatar img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:50% 50%!important;border-radius:50%!important;margin:0!important;padding:0!important;transform:none!important}
+#driveo-ai-widget #floatingAiBtn{position:relative!important;width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:visible!important;background:#ff0000!important;border:0!important;border-radius:50%!important;box-shadow:0 8px 24px rgba(255,0,0,.25)!important;isolation:isolate}
+#driveo-ai-widget #floatingAiBtn>img.driveo-ai-button-mark{display:block!important;width:48px!important;height:48px!important;max-width:48px!important;max-height:48px!important;object-fit:contain!important;object-position:center!important;flex:0 0 48px!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;transform:none!important}
+#driveo-ai-widget #floatingAiBtn>span{position:absolute!important;top:0!important;right:0!important;width:14px!important;height:14px!important;min-width:14px!important;min-height:14px!important;padding:0!important;margin:0!important;display:block!important;background:#fff!important;border:2px solid #ff0000!important;border-radius:50%!important;transform-origin:center!important;animation:driveoAiDotBlink 1.35s ease-in-out infinite!important;z-index:3!important;pointer-events:none!important}
+@keyframes driveoAiDotBlink{0%,100%{opacity:1;transform:scale(1);box-shadow:0 0 0 0 rgba(255,255,255,.25)}50%{opacity:.35;transform:scale(.86);box-shadow:0 0 0 3px rgba(255,255,255,.12)}}
+#driveo-ai-widget #ai-chat-messages{min-width:0!important;overscroll-behavior:contain}
+#driveo-ai-widget #driveo-chat-options{margin-top:12px!important;gap:8px!important}
+#driveo-ai-widget #aiChatInput{min-width:0!important}
+@media(max-width:640px){#driveo-ai-widget{right:12px!important;bottom:12px!important}#driveo-ai-widget #aiChatPopup{width:calc(100vw - 24px)!important;max-width:calc(100vw - 24px)!important;max-height:calc(100dvh - 92px)!important;margin-bottom:12px!important;border-radius:18px!important}#driveo-ai-widget #aiChatPopup>div:first-child{min-height:76px!important;padding:11px 12px!important;gap:12px!important}#driveo-ai-widget .driveo-ai-avatar-frame{width:50px!important;height:50px!important;flex-basis:50px!important}#driveo-ai-widget #ai-chat-messages .driveo-ai-message-avatar{width:40px!important;height:40px!important;flex-basis:40px!important}#driveo-ai-widget #floatingAiBtn{width:56px!important;height:56px!important;min-width:56px!important;min-height:56px!important}#driveo-ai-widget #floatingAiBtn>img.driveo-ai-button-mark{width:44px!important;height:44px!important;max-width:44px!important;max-height:44px!important;flex-basis:44px!important}#driveo-ai-widget #floatingAiBtn>span{width:14px!important;height:14px!important;min-width:14px!important;min-height:14px!important;top:0!important;right:0!important}#driveo-ai-widget #driveo-chat-options{padding-left:0!important}#driveo-ai-widget #driveo-chat-options>button{padding:10px!important}}
+@media(prefers-reduced-motion:reduce){#driveo-ai-widget #floatingAiBtn>span{animation:none!important}}
+</style>
+
+<style>
+/* DRIVEO AI: gunakan hanya lingkaran yang menyatu dengan artwork; indikator kecil tetap berkedip. */
+#driveo-ai-widget #floatingAiBtn{background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important;isolation:auto!important}
+#driveo-ai-widget #floatingAiBtn>span{width:12px!important;height:12px!important;min-width:12px!important;min-height:12px!important;top:3px!important;right:3px!important;border:2px solid #ff0000!important;animation:driveoAiDotBlink 1.35s ease-in-out infinite!important}
+@media(max-width:640px){#driveo-ai-widget #floatingAiBtn>span{width:11px!important;height:11px!important;min-width:11px!important;min-height:11px!important;top:3px!important;right:3px!important}}
+</style>
+<style>
+/* DRIVEO AI: enlarge original robot badge and make blink indicator visually attached */
+#driveo-ai-widget #floatingAiBtn{overflow:visible!important}
+#driveo-ai-widget #floatingAiBtn>img.driveo-ai-button-mark{width:54px!important;height:54px!important;max-width:54px!important;max-height:54px!important;flex:0 0 54px!important;object-fit:contain!important}
+#driveo-ai-widget #floatingAiBtn>span{top:2px!important;right:2px!important;width:12px!important;height:12px!important;min-width:12px!important;min-height:12px!important;border:2px solid #ff0000!important;animation:driveoAiDotBlink 1.35s ease-in-out infinite!important;box-shadow:0 0 0 1px rgba(255,255,255,.9)!important}
+@media(max-width:640px){#driveo-ai-widget #floatingAiBtn>img.driveo-ai-button-mark{width:52px!important;height:52px!important;max-width:52px!important;max-height:52px!important;flex-basis:52px!important}#driveo-ai-widget #floatingAiBtn>span{top:2px!important;right:2px!important}}
+</style>
+
+<style id="driveo-ai-smooth-unified-v4">
+/* Shared AI button polish: preserve artwork size, soften the indicator, and keep styling identical across pages. */
+#driveo-ai-widget #floatingAiBtn{transition:transform .24s ease,filter .24s ease!important;will-change:transform}
+#driveo-ai-widget #floatingAiBtn:hover{transform:translateY(-1px)!important;filter:brightness(1.02)!important}
+#driveo-ai-widget #floatingAiBtn>img.driveo-ai-button-mark{width:54px!important;height:54px!important;max-width:54px!important;max-height:54px!important;flex:0 0 54px!important;object-fit:contain!important;object-position:center!important}
+#driveo-ai-widget #floatingAiBtn>span{top:2px!important;right:2px!important;width:12px!important;height:12px!important;min-width:12px!important;min-height:12px!important;background:#fff!important;border:1.5px solid #ff343a!important;box-shadow:0 0 0 1px rgba(255,255,255,.78)!important;opacity:1!important;animation:driveoAiDotBlinkOriginal 1.5s ease-in-out infinite!important;transform-origin:center!important}
+@keyframes driveoAiDotBlinkOriginal{0%,100%{opacity:1;transform:scale(1);box-shadow:0 0 0 1px rgba(255,255,255,.78)}50%{opacity:.35;transform:scale(.85);box-shadow:0 0 0 2px rgba(255,255,255,.35)}}
+/* Gentle entrance when a separate page loads; does not change layout or button size. */
+#driveo-ai-widget{animation:driveoAiWidgetEnter .24s ease-out both!important}
+@keyframes driveoAiWidgetEnter{from{opacity:.88;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:640px){#driveo-ai-widget #floatingAiBtn>img.driveo-ai-button-mark{width:52px!important;height:52px!important;max-width:52px!important;max-height:52px!important;flex-basis:52px!important}#driveo-ai-widget #floatingAiBtn>span{top:2px!important;right:2px!important;width:12px!important;height:12px!important;min-width:12px!important;min-height:12px!important}}
+@media(prefers-reduced-motion:reduce){#driveo-ai-widget,#driveo-ai-widget #floatingAiBtn,#driveo-ai-widget #floatingAiBtn>span{animation:none!important;transition:none!important}}
+</style>
+
+<script>
+window.driveoTogglePasswordVisibility = function(inputId, button) {
+  const input = document.getElementById(inputId);
+  if (!input || !button) return;
+  const visible = input.type === 'password';
+  input.type = visible ? 'text' : 'password';
+  const slash = button.querySelector('[data-password-slash]');
+  if (slash) slash.style.display = visible ? '' : 'none';
+  button.setAttribute('aria-pressed', String(visible));
+  button.setAttribute('aria-label', visible ? 'Sembunyikan password' : 'Lihat password');
+};
+</script>
+</body></html>
+
+<script>
+/* DRIVEO LIVE DETAIL: ambil mobil dari database berdasarkan ?id= */
+let driveoDetailLoadingId = '';
+let driveoDetailLoadedId = '';
+let driveoDetailRequestVersion = 0;
+window.loadDriveoDetailFromAPI = async function loadDriveoDetailFromAPI(idOverride) {
+  const params = new URLSearchParams(window.parent?.location?.search || window.location.search);
+  const id = String(idOverride || params.get('id') || '').trim();
+  if (!id || id === driveoDetailLoadingId || id === driveoDetailLoadedId) return;
+  driveoDetailLoadingId = id;
+  const requestVersion = ++driveoDetailRequestVersion;
+
+  try {
+    const response = await fetch(`http://localhost:5000/api/cars/${encodeURIComponent(id)}`, {
+      headers: { Accept: 'application/json' }
+    });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.message || 'Gagal memuat detail mobil');
+    if (requestVersion !== driveoDetailRequestVersion) return;
+
+    const car = result?.data;
+    if (!car) return;
+
+    const name = `${car.merek || ''} ${car.model || ''}${car.varian ? ' ' + car.varian : ''}`.trim();
+    const rawImage = String(car.gambar || '').trim();
+    let image = rawImage;
+    if (rawImage && !/^https?:\/\//i.test(rawImage)) {
+      image = `http://localhost:5000/${rawImage.replace(/^\/+/, '')}`;
+    } else if (rawImage) {
+      try {
+        const imageUrl = new URL(rawImage);
+        if ((imageUrl.hostname === 'localhost' || imageUrl.hostname === '127.0.0.1') && /\/uploads?\//i.test(imageUrl.pathname)) {
+          imageUrl.protocol = 'http:';
+          imageUrl.host = 'localhost:5000';
+        }
+        image = imageUrl.href;
+      } catch (_) {}
+    }
+    const price = 'Rp ' + (Number(car.harga) || 0).toLocaleString('id-ID');
+
+    const set = (id, value) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = value ?? '-';
+    };
+
+    set('breadcrumb-car-title', name.toUpperCase());
+    set('car-name', name.toUpperCase());
+    set('car-year-label', car.tahun || '-');
+    set('car-price', price);
+    set('spec-engine', car.mesin || '-');
+    set('spec-power', car.tenaga || '-');
+    set('spec-transmission', car.transmisi || '-');
+    set('spec-year', car.tahun || '-');
+    set('spec-mileage', `${Number(car.kilometer || 0).toLocaleString('id-ID')} km`);
+    set('spec-capacity', car.penumpang ? `${car.penumpang} Penumpang` : '-');
+
+    const main = document.getElementById('main-car-image');
+    if (main && image) {
+      main.src = image;
+      main.alt = name;
+    }
+
+    const description = document.getElementById('car-description');
+    if (description) {
+      description.textContent = car.deskripsi || 'Belum ada deskripsi untuk mobil ini.';
+    }
+
+    // Karena DRIVEO memakai satu foto per mobil, thumbnail lama disembunyikan.
+    document.querySelectorAll('.thumb-item').forEach((thumb, index) => {
+      if (index > 0) thumb.style.display = 'none';
+      if (index === 0 && image) {
+        const thumbImg = thumb.querySelector('img');
+        if (thumbImg) thumbImg.src = image;
+        thumb.onclick = () => switchGalleryImage(image, thumb);
+      }
+    });
+
+    document.title = `DRIVEO - Detail ${name}`;
+    driveoDetailLoadedId = id;
+  } catch (error) {
+    console.error('Detail mobil API gagal:', error);
+  } finally {
+    if (requestVersion === driveoDetailRequestVersion) driveoDetailLoadingId = '';
+  }
+};
+
+window.loadDriveoDetailFromAPI();
+</script>
